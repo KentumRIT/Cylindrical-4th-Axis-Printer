@@ -28,3 +28,15 @@
 ### Useful Results
 - Lower speed, higher nozzle temperature, and finer layer thickness proved to be optimal for adhesion strength
 - Combination of 220 C nozzle temp, 30 mm/s speed, and 0.1 mm layer thickness required ~104N to be peeled over a surface area of 375 square milimeters acheiving a desirability factor of 0.893
+
+## [Investigation of the adhesion properties of direct 3D printing of polymers and nanocomposites on textiles: Effect of FDM printing process parameters](https://pdf.sciencedirectassets.com/271533/1-s2.0-S0169433217X00044/1-s2.0-S0169433217301137/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIExBN9dEZNBzXioe%2FuZyOmKZJl70k6MiK7beuWkyrJaPAiBs0kVCl7pyDgUG6Ws2VoXlDW%2FamgFSIBeLroV0fQbHsSq8BQi7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDA1OTAwMzU0Njg2NSIM2AOXPxk2zRpx9jeJKpAFTZt1D7dC%2BQ3MYhPbMPYa0mEgipovwttdD5j4cK1HiBqHXuKB%2BgShC3Kk%2BcPRKnhlITCbRw4yv479WGLuIDbw5kJbCl3aWOvZ4Ya8EIpfdRhBmt4Mux6HQBbzkb5Cat1XUoXTe42tLTxO6r5OQkcowZ%2BHWnsQCI8olY0Fzfg6niO%2FLL98aJSJzBYTCEamO9BcmXn873CpCUC5jVo5DuaPbLxl%2B48U82ppLRKV3gsTxO3q52wa1tFVdRv%2B%2FYYgTo9OcBxRhJIhAKmR%2BX1HfZzFYXtqEGkXryvGqk%2FEhAdYFxywB5tUSBn%2Bhr8B9wo1ppJQeTtFcXgkOF7JnfyFnttzbhg3X8YMb3oYNlheAuvmaibfIT6%2FCC9u8%2Bk5RA8Qbe8kzBfZgiMXr0lVKGpQD1%2BX%2FtBSXZdNDHfG4yP8sXRs1Ohy1zauFldP%2F69hw190hk44pqcx5kqlsHJ0NsjPHH2301rH6um7%2BhNLF44X8QXB7vslyJm0BRG5x352Nza%2BcAyyM8EaOH33ijnwAadEZ1ZWNjV5X%2BuLeB9Fbk9RXiFMAwK1d0N0ForeIfrv0pZdwZ7lCsO608njS8c6liS5DprlKv7RmNDLOddIiZokeGRkQEwaKJfp0J%2BP7OyRpUJIyTurEjH2FGO0MWeO0ZyBKCg9jdMfq0NVug9xtYjol1Kd3OD9WAAQWFi3ZjqPAX%2FPnzbDnP7YPmgV3a5dOAwudmmvg8p2Tzm%2F5zef5ImePNKpTugzo00iA6xVd0kDTAl%2Flx%2F7iLFq5ZdcFES3KekHQq%2F3WHSjNlsRWe3bwkbYs9VVwvbAhJ%2BNMR%2BtVF%2FHjkeQdreOruAQQJQf0Iwce3yqu0rdwEOhqFLhYUZIC3dc6RGQsYAwwd7E0gY6sgGGU%2Fe52tHArRpr6ZKamYZOmFMpL4mmlDGjfPTmzPMBcC2%2BVI0bDjxAybgyibJb%2FsRbzQ5t9nb42O6N8V4wDyteyboalK6lZZ8TDbFsLGotjUbyzU9KXu96NpMrgq%2BTNAo%2FrxgAmp7GtC6X74MTFpzbq6dKMAx5oTq3bziK34SbQ0E6d5bjn2POm9ELviIgP95qQ88WnM%2Fr6pIqZgk%2FJoKc%2BC9oUNUKfR%2Brv9ec02XcQOgT&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260710T183657Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYSNYPZV7B%2F20260710%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=bc0235d635cef1a63163ce1d92d9df3b79c45fc56784b95caa3e8dc41ca5e012&hash=94e4c995e73ccdf0d366132347c3d088a24677ae02edc611a2b98aa1c5c8925c&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0169433217301137&tid=spdf-33d04c50-4fb7-4274-bee1-58eb1574c018&sid=e10296383ab3c74a282bb6592a236bc8347fgxrqa&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=1313045658500403570d&rr=a191ad4c8f40e5f0&cc=us)
+### Input Parameters Investigated
+- Extruding temperature
+- Platform temperature
+- Printing speed
+### Output Parameters Investigated
+- Adhesion (N / 100 mm width)
+### Methods Used
+- Adhesion was tested via the  standard test method SS-EN ISO 11339:2010 using a Zwick/Z010 tensile tester
+### Useful Results
+- 
