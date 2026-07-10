@@ -1,0 +1,29 @@
+Y axis offset on back side 44.915 mm carriage face to inner frame face
+Y axis offset on back side 85.531 mm far nozzle to inner frame face
+
+X axis offset on left side 48.412 mm far nozzle to inner frame face
+
+Y axis offset on front side 20.307 mm carriage face to inner frame face
+Y axis offset on front side 85.491 mm far nozzle to inner frame face
+
+X axis offset on right side 48.412 mm far nozzle to inner frame face
+
+X axis nozzle offset 24.423 mm
+Y axis nozzle offset 53.800 mm
+
+Z axis offset on top side 10.21 mm from inner face to front of rail
+
+75.3 distance from inner side of bottom of frame to top face of lead screw nut at bottom position
+
+X: 548.412 48.412
+Y: 379.481 85.531
+
+40.615
+65.185
+
+0321064823-00001
+0321064823-00001
+
+442693
+
+X_Rail_Length_Ref - ( 10 mm + ( ( Linear_Rail_Hole_Count - 1 ) * 25 / 2 ) * 1 mm ) * 2 + 10 mm
