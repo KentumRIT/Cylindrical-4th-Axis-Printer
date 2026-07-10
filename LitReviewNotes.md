@@ -38,5 +38,10 @@
 - Adhesion (N / 100 mm width)
 ### Methods Used
 - Adhesion was tested via the  standard test method SS-EN ISO 11339:2010 using a Zwick/Z010 tensile tester
+- Materials were pulled apart with a pulling speed of 100 mm / min
+- Double sided tape was used to secure the fabric to the machine
 ### Useful Results
-- 
+- Results showed a somewhat strong positive linear relationship between nozzle temperature and stronger adhesion
+- Results showed little difference between increased bed temperature and stronger adhesion
+- Results showed a quadratic relationship between printing speed and stronger adhesion, peaking at 50-60 mm/min
+- Results showed that using similar or same materials between the mesh and the 3D printed structure greatly improves adhesion
