@@ -65,3 +65,27 @@ Slower speed printing especially for the first few layers
 - Shear Test - Using a 3D printed dolly printed on top of a textle and tearing the peices apart in parrallel until the specimen is fully destroyed
 ### Useful Results
 - The perpendicular tensile test proved to be overall better for testing. Whilst the results were similar across all three tests, the perpendicular tensile test was less prone to repurting the fabric at higher loads
+
+[Improving adhesion of three-dimensional printed objects on textile fabrics by polymer coating](https://journals.sagepub.com/doi/pdf/10.1177/1558925019895257)
+### Input Parameters Investigated
+- Existence of a PMMA Coating
+- Material of fabric-linen, cotten, and 0.17mm polyester
+### Output Parameters Investigated
+- Adhesive strength
+### Methods Used
+- Half of these fabrics were:
+  - coated with 5% PMMA
+  - dissolved in acetone by stirring for 2 h on a magnetic stirrer, using a metering wire coating with a wet film thickness of 100µm
+  - dried at room temperature for 1 day 
+### Useful Results
+- Specifically on PLA did show to have some level of improvement of adhesion strength
+
+[The influence of thermal after-treatment on the adhesion of 3D prints on textile fabrics](file:///C:/Users/tcarr/Downloads/_2020_Grmer_CDATP1_104-110.pdf)
+### Input Parameters Investigated
+- 
+### Output Parameters Investigated
+- 
+### Methods Used
+-  
+### Useful Results
+- 
