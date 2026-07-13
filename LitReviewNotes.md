@@ -82,10 +82,19 @@ Slower speed printing especially for the first few layers
 
 [The influence of thermal after-treatment on the adhesion of 3D prints on textile fabrics](file:///C:/Users/tcarr/Downloads/_2020_Grmer_CDATP1_104-110.pdf)
 ### Input Parameters Investigated
-- 
+- Type of printer filament
+- Thermal aftertreatment in the form of multiple ironings
+- Top Z distance
 ### Output Parameters Investigated
-- 
+- Adhesion strength
 ### Methods Used
--  
+-  Used a peel separation test according to the DIN 53530 standard and the force was evaluated in accordinance with the ISO 6133 standard
+-  The heat treatment was done as follows:
+    - A common ironing machine, without additional force and a weight of ~1200g and a defining temperature of 170-200 C was left on the fabric for 15 seconds 
+    - The iron was then taken off for two minutes before doing another 15 seconds of treatment
+    - The steps were repeated a few times before the printing was resumed 
+-  The force was measured with a Sauter force testing machine at a speed of 100 mm / min
 ### Useful Results
-- 
+- There was a small increase in adhesion with increased Z distance that significantly dropped after ~0.5mm. In fact, a small Z distance change from 0.45mm to 0.35 mm tripled the adhesion
+- CPE outpreformed every other filament on both the ironing and non-ironing tests
+- The ironing had somewhat significant improvements on adhesion, consistently providing an extra amuont of adhesion by a factor of ~1.5 on average
