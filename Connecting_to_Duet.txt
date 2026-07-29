@@ -1,4 +1,4 @@
-The Duet board's default IP address is 192.168.1.14
+The Duet board's default IP address is 192.168.2.14
 This website shows direct Duet-to-computer ethernet control among other methods of connecting: 
 
 On your windows computer, go to control panel > Network and Internet > Network and Sharing Center > Change adapter settings > Ethernet > Properties > Internet Protocol Version 4 (TCP/IPv4) Properties:
