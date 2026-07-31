@@ -1,0 +1,9 @@
+samples_per_run = 5;            % number of samples to make with each combination of parameters
+
+print_temp_range = [220,280];   % [low,high]
+print_temp_levels = 2;          % number of different temperatures to test
+
+ironing_range = [0,2];          % number of first layer repeats
+ironing_levels = 2;
+
+print_speed_range = []
