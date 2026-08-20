@@ -21,3 +21,46 @@ We first made a list of all controllable factors we thought would have an effect
 | Mandrel OD During Testing                           | N/A                                                                                                                | **No** The permanently attached regions restrict mesh expansion, so there is a limited range of diameters we can test. This is also just changing boundary conditions, not directly related to fabrication.                                                                                                                                                                                     |                          | **Unknown**                                                                                                                                                                                                                                                 |                   | **3-5** (Unknown)           |
 | Attachment Region Width                             | N/A                                                                                                                | **Yes** We can use this metric to demonstrate a primary benefit of 4th axis printing.                                                                                                                                                                                                                                                                                                           |                          | **Saturating** On the Prusa, the nozzle gets further from and less normal to the mandrel surface as width increases, reducing the benefit of extra width                                                                                                    | 2 - 6 mm          | **2** (Saturating)          |
 | Attachment Region Length                            | N/A                                                                                                                | **No** The size of the attachment region will definitely affect its strength, but that's so obvious maybe it's not worth testing.                                                                                                                                                                                                                                                               |                          | **Linear** We originally expected to see a 'stepped' response where adhesion surfaces get stronger very rapidly as they touch another mesh strand, but I don't think that will happen because the mesh won't be in the exact same position sample to sample |                   | **2-3** (Linear)            |
+
+
+
+
+
+
+Arnav Stuff:
+
+Optimizations:
+Set perimeter speeds to 120 from 170
+-	Slower speeds to increase shell quality
+Turned on interface shells
+-	Supposed to help with the ironing and overlapping
+First layer extrusion width to 0.25
+-	To help with quality fineness
+Bridge flow ratio to 1.5
+-	Help with the strength of the connector modules
+Avoid crossing perimeters
+- Prevents bridging issues
+Detect Bridging Parameters
+- For the overhangs on the McKibben muscles
+Seam position to rear
+- To change the location of the line thing
+Turned on fill gaps
+- To increase the connection surface area with the mesh
+Lowered flow rate by 2%
+- For cleanliness
+Lowered speeds by 50 mm/s
+- To prevent stringing
+Enabled dynamic overhang speeds
+- For the McKibben muscle connections
+Halved the first layer speed
+- To help with meltiness and ooze into the mesh
+Lowered external perimeter speeds by 80%
+- Because its delicate
+Enabled Ooze Prevention
+- Quality
+Enabled interface shells
+- For geometric fidelity
+Lowered extrusion width to 0.25
+- For quality
+Set bridge flow ratio to 1.5
+- For the McKibben Muscle connectors
