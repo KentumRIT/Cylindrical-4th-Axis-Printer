@@ -31,25 +31,50 @@ Arnav Stuff:
 
 Optimizations:
 Set perimeter speeds to 120 from 170
--	Slower speeds to increase shell quality
+
+Slower speeds to increase shell quality
+
+
 Turned on interface shells
--	Supposed to help with the ironing and overlapping
+
+Supposed to help with the ironing and overlapping
+
+
 First layer extrusion width to 0.25
--	To help with quality fineness
+
+To help with quality fineness
+
+
 Bridge flow ratio to 1.5
--	Help with the strength of the connector modules
+
+Help with the strength of the connector modules
+
+
 Avoid crossing perimeters
-- Prevents bridging issues
+
+Prevents bridging issues
+
+
 Detect Bridging Parameters
 - For the overhangs on the McKibben muscles
+
+
 Seam position to rear
 - To change the location of the line thing
+
+
 Turned on fill gaps
 - To increase the connection surface area with the mesh
+
+
 Lowered flow rate by 2%
 - For cleanliness
+
+
 Lowered speeds by 50 mm/s
 - To prevent stringing
+
+
 Enabled dynamic overhang speeds
 - For the McKibben muscle connections
 Halved the first layer speed
