@@ -70,8 +70,8 @@ For X and Y axis motors: **80**
 - motor steps per revolution: 200
 - microstepping multiplier: 16
 
-For Z motors: **1600**
-- leadscrew pitch: 2 *mm*
+For Z motors: **400**
+- leadscrew lead: 8 *mm*
 - gear ratio 1:1
 - motor steps per revolution: 200
 - microstepping multiplier: 16
@@ -107,9 +107,11 @@ To fix the above issues, I had to add code beyond what the online config tool pr
 
 ```
 ; set homing parameters
-; set homing parameters
-M915 X Y S5 H170 R0     ; lower minimum speed threshold with H parameter
-M913 X50 Y50            ; drop current to 50% to reduce belt-slip risk while homing
+M915 X Y Z S5 H170 R0   ; lower minimum speed threshold with H parameter
+                        ; set sensitivity to S5 (lower more sensitive)
+M913 X50 Y50 Z50        ; drop current to 50% to reduce belt-slip risk while homing
+M569 P0 V10             ; stay in stealthchop mode at higher speeds
+M569 P1 V10             ; stay in stealthchop mode at higher speeds
 M569 P2 V10             ; stay in stealthchop mode at higher speeds
 M569 P3 V10             ; stay in stealthchop mode at higher speeds
 
@@ -117,11 +119,15 @@ M569 P3 V10             ; stay in stealthchop mode at higher speeds
 ; homing code here...
 
 ; revert parameters
-M915 X Y S3 H200        ; S3 and H200 are default values
-M913 X100 Y100          ; use 100% motor power after homing
-M569 P2 V2000           ; get default tpwmthrs value by running "M569 P2" in console
+M915 X Y Z S3 H200      ; S3 and H200 are default values
+M913 X100 Y100 Z100     ; use 100% motor power after homing
+M569 P0 V2000           ; get default tpwmthrs value by running "M569 P0" in console
+M569 P1 V2000
+M569 P2 V2000           
 M569 P3 V2000
 
+; move away from wall
+G0 ?50
 ```
 
 ### Theta Axis Homing
