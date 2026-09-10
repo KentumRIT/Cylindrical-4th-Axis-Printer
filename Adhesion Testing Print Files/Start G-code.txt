@@ -1,0 +1,76 @@
+M17 ; enable steppers
+M862.3 P "XL" ; printer model check
+M862.5 P2 ; g-code level check
+M862.6 P"Input shaper" ; FW feature check
+M115 U6.2.6+8948
+G90 ; use absolute coordinates
+M83 ; extruder relative mode
+; set print area
+M555 X{first_layer_print_min[0]} Y{first_layer_print_min[1]} W{(first_layer_print_max[0]) - (first_layer_print_min[0])} H{(first_layer_print_max[1]) - (first_layer_print_min[1])}
+; inform about nozzle diameter
+{if (is_extruder_used[0])}M862.1 T0 P{nozzle_diameter[0]} A{(filament_abrasive[0] ? 1 : 0)} F{(nozzle_high_flow[0] ? 1 : 0)}{endif}
+{if (is_extruder_used[1])}M862.1 T1 P{nozzle_diameter[1]} A{(filament_abrasive[1] ? 1 : 0)} F{(nozzle_high_flow[1] ? 1 : 0)}{endif}
+{if (is_extruder_used[2])}M862.1 T2 P{nozzle_diameter[2]} A{(filament_abrasive[2] ? 1 : 0)} F{(nozzle_high_flow[2] ? 1 : 0)}{endif}
+{if (is_extruder_used[3])}M862.1 T3 P{nozzle_diameter[3]} A{(filament_abrasive[3] ? 1 : 0)} F{(nozzle_high_flow[3] ? 1 : 0)}{endif}
+{if (is_extruder_used[4])}M862.1 T4 P{nozzle_diameter[4]} A{(filament_abrasive[4] ? 1 : 0)} F{(nozzle_high_flow[4] ? 1 : 0)}{endif}
+
+; turn off unused heaters
+M104 T0 S0	; first tool is only used for probing, so never needs to be heated
+{if ! is_extruder_used[1]}M104 T1 S0{endif}
+{if num_extruders > 2 and ! is_extruder_used[2]}M104 T2 S0{endif}
+{if num_extruders > 3 and ! is_extruder_used[3]}M104 T3 S0{endif}
+{if num_extruders > 4 and ! is_extruder_used[4]}M104 T4 S0{endif}
+
+M217 Z{max(zhop, 2.0)} ; set toolchange z hop to 2mm, or zhop variable from slicer if higher
+
+; Home XY
+G28 XY
+
+; try picking tools used in print
+G1 F{travel_speed * 60}
+{if (is_extruder_used[0]) and (initial_tool != 0)}T0 S1 L0 D0{endif}
+{if (is_extruder_used[1]) and (initial_tool != 1)}T1 S1 L0 D0{endif}
+{if (is_extruder_used[2]) and (initial_tool != 2)}T2 S1 L0 D0{endif}
+{if (is_extruder_used[3]) and (initial_tool != 3)}T3 S1 L0 D0{endif}
+{if (is_extruder_used[4]) and (initial_tool != 4)}T4 S1 L0 D0{endif}
+
+; select probing tool (M0 disables tool mapping)
+T0 S1 M0 L0 D0
+
+
+; home Z with MBL tool
+M84 E ; turn off E motor
+G28 Z
+G0 Z5 ; add Z clearance
+
+
+; MBL
+M84 E ; turn off E motor
+G29 P1 X40 Y9 W280 H5		; full mesh is spaced from 0-360mm in X and Y 36 points each, so each step represents a change of 10.286mm
+				; probed points are 12x12 spaced every 3 points on the full mesh starting at 1,1 on the full mesh
+				; mandrels located at every other row, so Y = 10.29, 72, 133.71mm, ect.
+				; max safe X position is 332
+G29 P1 X40 Y71 W280 H5 C
+G29 P1 X40 Y132 W280 H5 C
+G29 P1 X40 Y194 W280 H5 C
+G29 P1 X40 Y256 W280 H5 C
+G29 P1 X40 Y317 W280 H5 C
+G29 T				; serial print sparse mesh
+G29 P3.2			; interpolate mesh
+G29 P3.13			; extrapolate mesh
+G29 A				; activate mesh
+G29 T				; serial print filled in mesh
+G1 Z10 F720			; move away in Z
+G1 F{travel_speed * 60}
+P0 S1 M0 L1 D0; park the tool (M0 disables tool mapping)
+
+
+; set extruder temp
+{if first_layer_temperature[0] > 0 and (is_extruder_used[0])}M104 T0 S{first_layer_temperature[0]}{endif}
+{if first_layer_temperature[1] > 0 and (is_extruder_used[1])}M104 T1 S{first_layer_temperature[1]}{endif}
+{if first_layer_temperature[2] > 0 and (is_extruder_used[2])}M104 T2 S{first_layer_temperature[2]}{endif}
+{if first_layer_temperature[3] > 0 and (is_extruder_used[3])}M104 T3 S{first_layer_temperature[3]}{endif}
+{if first_layer_temperature[4] > 0 and (is_extruder_used[4])}M104 T4 S{first_layer_temperature[4]}{endif}
+{if (is_extruder_used[0]) and initial_tool != 0}{endif}
+
+T{initial_tool} S1 L0 D0; pick initial tool
