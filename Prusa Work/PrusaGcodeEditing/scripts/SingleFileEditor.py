@@ -7,8 +7,8 @@ from PrusaGcodeEditing import GcodeEditor
 # Print parameters
 ironing_passes = 2              # Number of times to repeat the first layer, with 0 printing the first layer once
 max_x_pos = 320                 # Max position the x axis can go to before crashing
-layer_temps = [260,235,220]     # Temperatures for layers to print in C. The last temp in list used for all subsequent layers
-layer_speeds = [20,20,20]       # For each layer, perimeter speeds in mm/s. Infill will be printed at 1.25X perimeter speed. Layers not indicated will not be changed
+layer_temps = [250,235,220]     # Temperatures for layers to print in C. The last temp in list used for all subsequent layers
+layer_speeds = [50,50]          # For each layer, perimeter speeds in mm/s. Infill will be printed at 1.25X perimeter speed. Layers not indicated will not be changed
 extrusion_mult = 1.5            # Extrusion multiplier FOR THE FIRST LAYER ONLY. Affects only positive extrusions
 z_offset = 0.00                 # Offset from surface of mesh to first layer print height
 

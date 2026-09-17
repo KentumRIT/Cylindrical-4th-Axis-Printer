@@ -19,32 +19,45 @@ class GcodeEditor:
             - None ATM
         """
 
-    def __init__(self):
+    def __init__(self, move_speed_threshold = 200*60, sliced_perimeter_speed = 170*60):
+        """ Purpose: set up parameters for editing
+                
+            args:
+                - move_speed_threshold,     speeds above this value (mm/min) will not be edited
+                - sliced_perimeter_speed,   used to scale speeds in gcode
+            
+            returns:
+                - x_val,    the first encountered X coordinate
+                - y_val,    the first encountered Y coordinate
+        """
         # Define X/Y positions for wiping
         self.mandrel_y_positions = [10.3, 72.0, 133.9, 195.8, 257.3, 319.5]
         self.wipe_x_pos = 0
 
-        # Define speed multipliers for each type of printing section
+        # Define speed thresholds
+        self.move_speed_threshold = move_speed_threshold
+        self.sliced_perimeter_speed = sliced_perimeter_speed
+
+        # NOT CURRENTLY USING defined speed multipliers for each type of printing section
         # (sections defined with the ";TYPE:" header that aren't on the non-printing moves list will use a multiplier of 1)
         # all multipliers based off the default "speed for print moves" ratios in the Prusa slicer
-        self.printing_move_types = [
-            ("Perimeter", 1),
-            ("Small perimeter", 1),
-            ("External perimeter", 1),
-            ("Overhang perimeter", 1),
-            ("Internal infill", 20/17),
-            ("Solid infill", 20/17),
-            ("Top solid infill", 10/17),
-            ("Bridge infill", 45/170),
-            ("Support material", 12/17),
-            ("Support material interface", 5/17)
-        ]
+        self.printing_move_types = {
+            "Perimeter":                    1,
+            "Small perimeter":              1,
+            "External perimeter":           1,
+            "Overhang perimeter":           1,
+            "Internal infill":              20/17,
+            "Solid infill":                 20/17,
+            "Top solid infill":             10/17,
+            "Bridge infill":                45/170,
+            "Support material":             12/17,
+            "Support material interface":   5/17
+        }
 
         # Define non-printing move types. Speeds won't be changed here
-        self.non_printing_move_types = [
+        self.non_printing_move_types = {
             "Custom"
-        ]
-
+        }
 
 
     def __get_first_xy(self, gcode: list[str]) -> tuple[float,float]:
@@ -99,14 +112,99 @@ class GcodeEditor:
         layer_indices.append(last_index)
         return layer_indices
 
-    def edit_gcode(self, gcode: list[str], ironing_passes: int, layer_temps: list[float], layer_speeds: list[float], extrusion_mult: float, z_offset: float, max_x_pos: float = 320) -> tuple[list[str], list[str], list[str]]:
+    def __adjust_print_speeds(self, printing_gcode: list[str], speed_mults: list[float], layer_indices: list[int]) -> list[str]:
+        """ Purpose: Set print speeds for layers defined in layer_speeds
+        
+            args:
+                - printing_gcode,   the G-code for the printing section
+                - speed_mults,      for each layer, multiplier for print speeds
+                - layer_indices,    indices for where each layer starts in printing_gcode
+            
+            returns:
+                - printing_gcode,   edited G-code
+        """
+
+        
+        num_layers = len(layer_indices) - 1
+        for i in range(0,min(len(speed_mults), num_layers)):
+            layer_gcode = printing_gcode[layer_indices[i]:layer_indices[i+1]]
+
+            speed_scaling_factor = speed_mults[i]
+
+
+            g_code_zone = "non_printing"
+            section_speed_ratio = 1
+            for j in range(len(layer_gcode)):
+                line = layer_gcode[j]
+
+                # ignore blank lines
+                if line.strip() == "":
+                    continue
+
+                # find comment code vs comment lines
+                line_type = "code"
+                if re.match(r'^\s*;', line):
+                    line_type = "comment"
+
+                # for comments, identify printing section headers vs non-printing sections
+                if line_type == "comment":
+                    stripped_line = line.strip()
+                    header_match = re.match(r'^;+\s*TYPE:\s*(.+)$', stripped_line)
+
+                    if header_match:
+                        header_name = header_match.group(1).strip()
+                        if header_name in self.printing_move_types:
+                            # section_speed_ratio = self.printing_move_types[header_name]
+                            g_code_zone = "header"
+
+                        elif header_name in self.non_printing_move_types:
+                            g_code_zone = "non_printing"
+
+                        else:
+                            raise ValueError(f"Unrecognized section type: {header_name}")
+
+                # for code, pull and set speed values
+                elif line_type == "code":
+                    # grab the unedited G-code's print speed if we're entering a new section, then change it to new value
+                    if g_code_zone == "header":
+                        g_code_zone = "printing"
+
+                        f_match = re.match(r'^G1\s+F(\d*\.?\d+)\s*$', line.strip())
+                        if f_match:
+                            old_speed = float(f_match.group(1))
+                            # new_speed = old_speed * speed_scaling_factor * section_speed_ratio  # get speed for this section
+                            new_speed = old_speed * speed_scaling_factor
+                            line = re.sub(r'F\d*\.?\d+', f'F{new_speed:.4f}', line)
+
+                    # change old print speed values to new print speed (ignores travel moves at higher speeds)
+                    elif g_code_zone == "printing":
+                        if re.match(r'^\s*(G0|G1|G2|G3)\b', line):
+
+                            f_match = re.search(r'\sF(\d*\.?\d+)\s', line)
+                            if f_match:
+                                old_speed = float(f_match.group(1))
+                                #new_speed = old_speed * speed_scaling_factor * section_speed_ratio  # get speed for this section
+                                new_speed = old_speed * speed_scaling_factor
+
+                                if old_speed <= self.move_speed_threshold:
+                                    line = re.sub(r'F\d*\.?\d+', f'F{new_speed:.4f}', line)
+
+                layer_gcode[j] = line
+                    
+            printing_gcode[layer_indices[i]:layer_indices[i+1]] = layer_gcode
+
+        return printing_gcode
+
+
+
+    def edit_gcode(self, gcode: list[str], ironing_passes: int, layer_temps: list[float], speed_mults: list[float], extrusion_mult: float, z_offset: float, max_x_pos: float = 320) -> tuple[list[str], list[str], list[str]]:
         """ Purpose: Edit G-code for printing on mesh
 
             args:
                 - gcode,            the ASCII-text G-code broken down into a list where each entry is a line of the original file (as happens when using readlines)
                 - ironing_passes,   number of times to repeat the first layer, with 0 printing the first layer once
                 - layer_temps,      temperatures for layers to print in C. The last temp in list used for all subsequent layers
-                - layer_speeds,     for each layer, perimeter speeds in mm/s. Other printing moves will be a multiple of perimeter speed; see init for details. Non-printing moves won't have their speeds changed. Layers not indicated will not be changed
+                - speed_mults,      for each layer, multiplier for print speeds. Non-printing moves won't have their speeds changed. Layers not indicated will not be changed
                 - extrusion_mult,   extrusion multiplier FOR THE FIRST LAYER ONLY. Affects only positive extrusions. Slicing must be done in relative extrusion mode
                 - z_offset,         offset from surface of mesh to first layer print height
                 - max_x_pos,        max position the X axis can go to before crashing
@@ -133,7 +231,7 @@ class GcodeEditor:
 
 
         # Check if print head will crash
-        pattern = re.compile(r'^(G0|G1).*?X([-+]?\d*\.?\d+)')
+        pattern = re.compile(r'^(G0|G1).*?X([-+]?\d*\.?\d+)', re.IGNORECASE)
         for line in gcode:
             match = pattern.search(line)
             if match:
@@ -158,7 +256,7 @@ class GcodeEditor:
             z_val += z_offset
             return f"Z{z_val:.4f}"
         
-        pattern = re.compile(r'Z([-+]?\d*\.?\d+)')
+        pattern = re.compile(r'Z([-+]?\d*\.?\d+)', re.IGNORECASE)
         printing_gcode = [
             pattern.sub(adjust_z, line)
             for line in printing_gcode[layer_indices[0]:layer_indices[-1]]
@@ -172,7 +270,7 @@ class GcodeEditor:
                 e_val = e_val*extrusion_mult
             return f"E{e_val:0.6f}"
 
-        pattern = re.compile(r'E([-+]?\d*\.?\d+)')
+        pattern = re.compile(r'E([-+]?\d*\.?\d+)', re.IGNORECASE)
         first_layer_gcode = printing_gcode[layer_indices[0]:layer_indices[1]]
         first_layer_gcode = [
             pattern.sub(adjust_e, line)
@@ -182,16 +280,9 @@ class GcodeEditor:
 
 
         # Adjust printing speeds
-        num_layers = len(layer_indices) - 1
-        for i in range(1,min(len(layer_speeds), num_layers)):
-            layer_gcode = printing_gcode[layer_indices[0]:layer_indices[i+1]]
-
-
-            for line in layer_gcode
-            # Find a section of printing code beginning with ";TYPE:" 
-        # Find the printing speed for this block, should immediately follow the comment block, if none found use previous known speed as printing speed for this block
-        # Replace all instances of the printing speed with the modified speed, but leave non-printing moves (moves using higher speeds) alone
-
+        printing_gcode = self.__adjust_print_speeds(printing_gcode, speed_mults, layer_indices)
+                
+                
         # Ironing functionality
         if ironing_passes != 0:
             # Prepare ironing code by removing extrusion from G0/G1 moves in the first layer code

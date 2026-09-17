@@ -4,29 +4,19 @@ import os
 import re
 from PrusaGcodeEditing import GcodeEditor
 
+
 # Print parameters
-ironing_passes = [2,2,2,2,2,2]
-layer_temps = [[240,230,220],[240,230,220],[240,230,220],[240,230,220],[240,230,220],[240,230,220]]
-z_offset = [0.00,0.00,0.00,0.00,0.00,0.00]
+standard_printing_temp = 220                                # deg C
+first_layer_temps = [240, 240, 240, 240, 240, 240]          # layer temps for each print are first layer temp, midpoint, standard printing temp
 
-# Function definitions
-# def get_last_extrusion(gcode):
-#     """ Purpose: find the last known extrude commanded position (or relative position)
-#     args:
-#         - print_code,   the ASCII-text G-code for just the printing section of an object
-#     returns:
-#         - e_val,        the last known extruder position returns 0 if none found
-#     """
+first_layer_speed_mults = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]    # layer speed multipliers for each print are first layer mult, midpoint, 1.0
 
-#     for line in reversed(gcode):
-#         cmd_match = re.match(r'^(G0|G1)\b', line)
-#         if not cmd_match:
-#             continue
-#         e_match = re.search(r'\sE(-?\d*\.?\d+)', line)
-#         if e_match:
-#             return float(e_match.group(1))
+ironing_passes = [2, 2, 2, 2, 2, 2]                         # how many times to repeat 1st layer G-code with no additional extrusion
 
-#     return 0
+z_offsets = [0.00, 0.00, 0.00, 0.00, 0.00, 0.00]            # distance between the mandrel surface and the first layer in the Z direction
+
+extrusion_mults= [1.2, 1.2, 1.2, 1.2, 1.2, 1.2]             # multiplier for positive extrusion moves in the first layer
+
 
 # Open a G-code editor
 editor = GcodeEditor()
@@ -57,17 +47,26 @@ file_path = os.path.join(folder_path, gcode_files[0])
 with open(file_path) as f:
         contents = f.readlines()
 
-start_code, print_code, end_code = editor.edit_gcode(contents,ironing_passes[0],layer_temps[0],z_offset[0])
+
+
+layer_temps = [first_layer_temps[0], round((first_layer_temps[0] + standard_printing_temp)/2) , standard_printing_temp]
+speed_mults = [first_layer_speed_mults[0], float(first_layer_speed_mults[0] + 1)/2 , 1]
+
+start_code, print_code, end_code = editor.edit_gcode(contents,ironing_passes[0],layer_temps,speed_mults,extrusion_mults[0],z_offsets[0])
 
 edited_contents = start_code + print_code
 
+# Edit the G-code for each file
 for i in range(1,len(ironing_passes)):
     # Get the file path to the next .gcode file in the folder arranged alphabetically
     file_path = os.path.join(folder_path, gcode_files[i])
     with open(file_path) as f:
         contents = f.readlines()
 
-    _, print_code, _ = editor.edit_gcode(contents,ironing_passes[i],layer_temps[i],z_offset[i])
+    layer_temps = [first_layer_temps[i], round((first_layer_temps[i] + standard_printing_temp)/2) , standard_printing_temp]
+    speed_mults = [first_layer_speed_mults[i], float(first_layer_speed_mults[i] + 1)/2 , 1]
+
+    _, print_code, _ = editor.edit_gcode(contents,ironing_passes[i],layer_temps,speed_mults,extrusion_mults[i],z_offsets[i])
     
     # add object start G-code between objects
     object_start_code = [
