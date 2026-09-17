@@ -64,13 +64,10 @@ G1 Z10 F720			; move away in Z
 G1 F{travel_speed * 60}
 P0 S1 M0 L1 D0; park the tool (M0 disables tool mapping)
 
-
-; set extruder temp
-{if first_layer_temperature[0] > 0 and (is_extruder_used[0])}M104 T0 S{first_layer_temperature[0]}{endif}
-{if first_layer_temperature[1] > 0 and (is_extruder_used[1])}M104 T1 S{first_layer_temperature[1]}{endif}
-{if first_layer_temperature[2] > 0 and (is_extruder_used[2])}M104 T2 S{first_layer_temperature[2]}{endif}
-{if first_layer_temperature[3] > 0 and (is_extruder_used[3])}M104 T3 S{first_layer_temperature[3]}{endif}
-{if first_layer_temperature[4] > 0 and (is_extruder_used[4])}M104 T4 S{first_layer_temperature[4]}{endif}
-{if (is_extruder_used[0]) and initial_tool != 0}{endif}
+G1 Z150
+M117 Put Mesh on Mandrels
+G4 S5
+M601
 
 T{initial_tool} S1 L0 D0; pick initial tool
+

@@ -1,0 +1,29 @@
+Min X position: 42 mm
+Max X position: 320 mm
+Printing position center at: 181 mm
+Total printing length: 278 mm
+
+Mandrel Z height: ~20mm overall from bed
+
+Max travel speed:
+	- so far tested 24000 which causes stuttering and 6000 which works fine
+
+Extruder 0 (probing head) to Extruder 2 (printing head) z offset:
+	E0 used to home Z
+	E0 Z distance when center of Charlie card first gave resistance: 1.05 mm
+	E2 Z distance when center of Charlie card first gave resistance: 0.90 mm
+	delta: -0.15 mm
+
+	tested on mandrels with mesh leveling enabled:
+	E0 Z distance: 0.80 mm
+	E2 Z distance: 0.65 mm
+	same delta yay!
+
+Mandrel Y positions:
+	1: 10.3
+	2: 72.0
+	3: 133.9
+	4: 195.8
+	5: 257.3
+	6: 319.5
+
