@@ -1,3 +1,0 @@
-Trying to find the lower-bound for PLA printing temperature where it will still adhere reasonably well to the mesh at a high Z-offset.
-
-Parameters:

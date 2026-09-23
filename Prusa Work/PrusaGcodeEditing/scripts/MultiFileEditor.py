@@ -7,15 +7,15 @@ from PrusaGcodeEditing import GcodeEditor
 
 # Print parameters
 standard_printing_temp = 220                                # deg C
-first_layer_temps = [240, 240, 240, 240, 240, 240]          # layer temps for each print are first layer temp, midpoint, standard printing temp
+first_layer_temps = [260, 260, 260, 260, 260, 260]          # layer temps for each print are first layer temp, midpoint, standard printing temp
 
-first_layer_speed_mults = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]    # layer speed multipliers for each print are first layer mult, midpoint, 1.0
+first_layer_speed_mults = [0.45, 0.45, 0.45, 0.45, 0.45, 0.45]    # layer speed multipliers for each print are first layer mult, midpoint, 1.0
 
-ironing_passes = [2, 2, 2, 2, 2, 2]                         # how many times to repeat 1st layer G-code with no additional extrusion
+ironing_passes = [1, 1, 1, 1, 1, 1]                         # how many times to repeat 1st layer G-code with no additional extrusion
 
-z_offsets = [0.00, 0.00, 0.00, 0.00, 0.00, 0.00]            # distance between the mandrel surface and the first layer in the Z direction
+z_offsets = [0.25, 0.25, 0.25, 0.25, 0.25, 0.25]            # distance between the mandrel surface and the first layer in the Z direction
 
-extrusion_mults= [1.2, 1.2, 1.2, 1.2, 1.2, 1.2]             # multiplier for positive extrusion moves in the first layer
+extrusion_mults= [1.75, 1.75, 1.75, 1.75, 1.75, 1.75]             # multiplier for positive extrusion moves in the first layer
 
 
 # Open a G-code editor
@@ -24,7 +24,7 @@ editor = GcodeEditor()
 # Use Tkinter to prompt the user to open a folder
 root = tk.Tk()
 root.withdraw()  # hide the empty root window
-dir = "D:\\Github Stuff\\Cylindrical-4th-Axis-Printer\\Prusa Work"
+dir = "D:\\Github Stuff\\Cylindrical-4th-Axis-Printer\\Prusa Work\\Adhesion Testing\\Variance Testing"
 folder_path = filedialog.askdirectory(
     title="Select folder containing .gcode files",
     initialdir = dir
@@ -75,7 +75,8 @@ for i in range(1,len(ironing_passes)):
         "G0 Z10		; move up to avoid collisions\n",
         "G90   		; absolute positioning mode\n",
         "M83 		; extruder relative mode\n",
-        f"G0 X{0:.2f} F10000;  move to wiping X position\n"
+        f"G0 X{0:.2f} F10000;  move to wiping X/Y position\n",
+        f"G0 Y{0:.2f}\n\n"
     ]
 
     edited_contents = edited_contents + object_start_code + print_code
@@ -83,7 +84,8 @@ for i in range(1,len(ironing_passes)):
 edited_contents = edited_contents + end_code
 
 # Write to a new file in the same folder 
-output_path = os.path.join(folder_path, "combined_gcode.gcode")
+# output_path = os.path.join(folder_path, "combined_gcode.gcode")
+output_path = os.path.join("D:\\Github Stuff\\Cylindrical-4th-Axis-Printer\\Prusa Work\\Adhesion Testing\\Variance Testing\\Printing G-code\\change_this_name.gcode")
 with open(output_path, "w") as f:
     f.writelines(edited_contents)
 
