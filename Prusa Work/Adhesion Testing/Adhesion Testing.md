@@ -51,9 +51,17 @@ The Prusa slicer output is then sent through our [G-code editing script](../Prus
 ### Printed Geometry
 A 30mm long, 5mm wide, 2mm high bar centered on each mandrel in X and Y.
 
-### Experimental Notes & Results
+### Experimental Notes
 See the [Excel sheet](../Adhesion%20Testing/Parameter%20Sweep%20Results.xlsx) for details.
- 
+
+### Results
+
+
+## Midpoint Variance Testing
+- Samples 5mm wide, 30mm long, 15mm tall printed 40mm off center to fit on ADMET
+- Samples secured to rod for ADMET shear testing using 4 hose clamps, 2 on either end tightened using the makita hand drill to clutch setting 1 for consistency
+- Samples tested to failure, with peak load as the recorded parameter (though full profiles are recorded as well)
+
 ## Screening Study
 5 factors are being tested here, at least 2 of which are expected to have relevant curvature in their effects and many of these factors are expected to interact. This makes it infeasible to run a full or high-power factorial design with enough statistical power to resolve effects. To this end, we chose to run a screening study to identify most significant effects that we can then study further. We chose to use a definitive screening design for this as it uses samples very efficiently, can resolve all main effects and largely resolve two-factor interactions, and can estimate curvature.
 
