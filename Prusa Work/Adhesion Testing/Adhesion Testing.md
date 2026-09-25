@@ -59,6 +59,7 @@ See the [Excel sheet](../Adhesion%20Testing/Parameter%20Sweep%20Results.xlsx) fo
 
 ## Midpoint Variance Testing
 - Samples 5mm wide, 30mm long, 15mm tall printed 40mm off center to fit on ADMET
+- Mesh placed all the way down to the end of the rod for testing on ADMET
 - Samples secured to rod for ADMET shear testing using 4 hose clamps, 2 on either end tightened using the makita hand drill to clutch setting 1 for consistency
 - Samples tested to failure, with peak load as the recorded parameter (though full profiles are recorded as well)
 
