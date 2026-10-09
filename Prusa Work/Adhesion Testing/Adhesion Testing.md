@@ -23,7 +23,7 @@ We first made a list of all controllable factors we thought would have an effect
 | **Attachment Region Length:** Length of the printed object at the first layer (length is measured parallel to the mandrel axis)                            | N/A                                                                                                                | **No** The size of the attachment region will definitely affect its strength, but that's so obvious maybe it's not worth testing.                                                                                                                                                                                                                                                               |                          | **Linear** We originally expected to see a 'stepped' response where adhesion surfaces get stronger very rapidly as they touch another mesh strand, but I don't think that will happen because the mesh won't be in the exact same position sample to sample |                   | **2-3** (Linear)            |
 
 ## Factor Level Characterization
-### Justification
+### Purpose
 Before running any study of the above parameters, we need to determine reasonable ranges for each factor that will define our study space. It's important that prints don't fail during a study, as we can't measure the failure force (the response variable) for those samples.
 
 ### Initial testing
@@ -32,7 +32,7 @@ For each factor, we divided the *anticipated range* in the above table into six 
 
 Because we don't want *any* prints to fail during testing, we intentionally pick the worst-performing value of all previously-tested factors when testing subsequent factors. For example, if we find that 210 C is the lowest temperature that can create successful prints, then we keep temperature at 210 C for the rest of the factors as we test them. This becomes an iterative process, where we cycle from temperature, to ironing, to speed, etc. back to temperature and through the list again, shrinking our process window each time. This iteration will end when we've made it a full cycle with no changes needed
 
-At the start of testing, before we've tested each factor, we pick the midpoint of the range of each other factor (ironing rounded down). For the first go-around, if no prints in the range fail, we immediately test that parameter again outside of the range previously tested. We repeat this until either a hardware limit is reached, the print fails, or some reasonable limit is reached (i.e. if 0 ironing is successful, it's unlikely any amount of ironing will cause failure, so we cap this parameter at 3 passes). If all prints in the range fail, we either reduce the range of the previously tested parameter or move on to the next parameter.
+At the start of testing, before we've tested each factor, we pick the center point of the range of each other factor (ironing rounded down). For the first go-around, if no prints in the range fail, we immediately test that parameter again outside of the range previously tested. We repeat this until either a hardware limit is reached, the print fails, or some reasonable limit is reached (i.e. if 0 ironing is successful, it's unlikely any amount of ironing will cause failure, so we cap this parameter at 3 passes). If all prints in the range fail, we either reduce the range of the previously tested parameter or move on to the next parameter.
 
 "Failing" here means that the plastic comes off the mesh when trying to remove the mesh from the mandrel. This includes "spaghetti" prints that never manage to connect to the mesh, but doesn't include "ugly" prints that stay on the mesh. "Failing" can also happen if the printer crashes as a result of poorly chosen print parameters (i.e. if z offset was chosen to be -1 mm the nozzle would likely crash into the mandrel).
 
@@ -85,41 +85,86 @@ The Prusa slicer output is then sent through our [G-code editing script](../Prus
 A 30mm long, 5mm wide, 2mm high bar centered on each mandrel in X and Y.
 
 ### Experimental Notes
-See the [Excel sheet](../Adhesion%20Testing/Parameter%20Sweep%20Results.xlsx) for details.
+See the [Excel sheet](/Parameter%20Sweep%20Testing/Parameter%20Sweep%20Results.xlsx) for details.
 
-## Midpoint Variance Testing
-- Samples 5mm wide, 30mm long, 15mm tall printed 40mm off center to fit on ADMET
+## Center Point Variance Testing
+### Purpose
+We need a good estimation of our process variance to size our future studies to appropriate statistical power. We only need to extract the process variance (not mandrel-to-mandrel variation) because mandrel number will be included as a blocking variable in future studies.
+
+### Methods
+**ADMET Testing**
 - Mesh placed all the way down to the end of the rod for testing on ADMET
 - Samples secured to rod for ADMET shear testing using 4 hose clamps, 2 on either end tightened using the makita hand drill to clutch setting 1 for consistency
-- The rod is not straightened using the end nut on the ADMET connector, it's allowed to swing slightly
+- The rod is not straightened using the end nut on the ADMET connector; it's allowed to swing slightly
 - Clamp was balanced with a plastic piece in the other end of the jaw of equal thickness (width) to the tested piece
 - Load cell zeroed after clamp closed just before testing using "Shear Test to Failure"
 - Samples tested to failure, with peak load as the recorded parameter (though full profiles are recorded as well)
+- 18 samples total, 3 per mandrel
 
-## Screening Study
-5 factors are being tested here, at least 2 of which are expected to have relevant curvature in their effects and many of these factors are expected to interact. This makes it infeasible to run a full or high-power factorial design with enough statistical power to resolve effects. To this end, we chose to run a screening study to identify most significant effects that we can then study further. We chose to use a definitive screening design for this as it uses samples very efficiently, can resolve all main effects and largely resolve two-factor interactions, and can estimate curvature.
+**Statistical Analysis**
+Looking at our results as if we would like to model mandrel-to-mandrel devitation via ANOVA yields:
 
-This [community blog post](https://community.jmp.com/t5/JMPer-Cable-Blog/Proper-and-improper-use-of-Definitive-Screening-Designs-DSDs/bc-p/541512) by a co-inventor of DSD as a method discusses when it is an appropriate experimental tool.
-- More than 4 factors
-- Continuous factors where a curve fit is desired
-- Independently controllable factors
+$SST = SSM + SSE$
 
-...and when it is not appropriate:
-- Categorical factors with more than 2 levels
-- When a hard-to-change factor results in a split-plot design
-- When cubic effects are important
+Where $SSE$ represents the total error in our model not attributable to mandrel-to-mandrel deviation. We calculate $SSE$ as:
+
+$SSE = \sum_{i=1}^{6} \sum_{j=1}^{3} (y_{ij} - \bar{Y}_i)^2$
+
+Where $y_{ij}$ represents the adhesion strength of the $j^{th}$ print on mandrel $i$, and $\bar{Y}_i$ represents the group mean for mandrel $i$. We can use this to calculate the mean square error:
+
+$MSE = \frac{SSE}{df_E}$
+
+Here $df_E$ reprsents the degrees of freedom of the error, which is equal to the number of samples $18$ minus the number of mandrels $6$, or $12$.
+
+### Results
+The mean square error of the process was $187.9832 \text{ lbs}^2$, which gives an RMSE of $13.71069 \text{ lbs}$.
+
+### Print Settings
+Same as [Factor Level Characterization](#factor-level-characterization).
+
+### Printed Geometry
+A 30mm long, 5mm wide, 15mm high bar centered on each mandrel in X and Y
+
+### Experimental Notes
+Same file as [Factor Level Characterization](#factor-level-characterization).
+
+## Adhesion Strength Optimization Study
+### Purpose
+Identify optimal printing parameters for our process specifically, and identify significant trends that could inform print parameters for other processes
+
+### Methods
+**Chosen Statistical Structure**
+- RSM I-optimal design using JMP's custom design tool
+- 60 freely chosen points, 12 repeats, and 18 centerpoints from [variance testing](#center-point-variance-testing) for a total of 90 samples
 
 
+**JMP Process**
+*Sample Size Estimation*:
+1) Set optimality criterion to I-optimal.
+2) Add response (adhesion strength) and factors (tested printing parameters).
+3) Decide on the number of samples to try (60 minimum for our set of parameters).
+4) Add mandrel as a blocking factor with runs per block equal to the number of samples / 6.
+5) Add all RSM terms to model (main effects, 2FI, and 2nd order terms).
+6) Hold center points at 18, then choose a number of replicate runs and enter the previously-decided total number of runs. The blocking factor (mandrel) should now have 6 levels.
+7) Make design, and under power analysis fill in the anticipated RSME and anticipated coefficients as seen in the figure below.
+8) We want to achieve at least 0.8 statistical power - the interdisciplinary standard minimum according to the [literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC7425741/). Repeat steps 3-7 until sufficient power has been achieved.
+\
+    We found that 90 samples with 12 repeats and 18 centerpoints was an adequate size, providing reasonably high statistical power without being an onerous number of samples. Below is the statistical power achieved by this design:
 
-We used [DSDApp](https://openresearchsoftware.metajnl.com/articles/10.5334/jors.462) to create our levels via the [web app](https://my-first-dsd.shinyapps.io/DSDApp_ver2/). The following parameters were used:
-- 5 factors
-- 0 2-level (categorical) factors
-- 2 center runs
-
-### Level Characterization
-Before running the DSD, we had to decide on values for the high, low, and midpoint levels for each factor. It was very important to find values that would successfully print even if they weren't optimal. Failed prints will create dead spots in the final dataset which will greatly lower our statistical power. To this end, we manually tested each parameter independently to find the reasonable upper and lower bounds for successful printing, with the midpoint being the average of the high and low values.
-
-### Sample Count Characterization
+    In [center point testing](#center-point-variance-testing), we found mandrels had an average absolute effect of 10.8152 lbs from the mean. Thus, we aren't interested in identifying effects much smaller than ~5 lbs, as at that size mandrel-to-mandrel deviation will begin to dominate.
 
 
-We tested N samples per combination of levels, with the order of samples printed and tested in the same randomized order to prevent systemic error from being seen as an effect.
+    
+    
+
+
+We use the RMSE found in the previous section to identify an acceptable number of samples. A custom design was chosen with I-optimal critera. We selected 12 repeats and 18 centerpoints, then tweaked the number of total samples until sufficient statistical power was achieved. To estimate power, we assume an anticipated coefficient of 10 lbs for all primary effects and 5 lbs (around the same ), and we used the measured effect from variance testing for each mandrel. We decided **90 samples total** was the best middle-ground between catching all main effects and some 2FI and curvature. This [file](/Optimization%20Testing/I%20Optimal%20Design.jmp) shows the JMP analysis and results. Power analysis results are also shown below:
+![Power Analysis Results](/Optimization%20Testing/Power%20Analysis.png)
+
+2) The optimal design created in the previous step is not suitable for our analysis, as the 18 centerpoints created there aren't distributed across our blocking factor (mandrels) evenly like was the case during variance testing. As suggested on this [JMP community board](https://community.jmp.com/t5/Discussions/Custom-Design-Around-Existing-Data-With-Blocking-Factor/m-p/975146/thread-id/110640#M110641), we create a new I-optimal design. This design has the same settings as in step 1, except it has no 0 centerpoints and correspondingly 18 less runs (72 runs). Excluding the previously-collected runs from the custom design optimization shouldn't impact the distribution of other samples much, as the expected response surface variance shouldn't be impacted much by the inclusion of an extra sample location. This [file](/Optimization%20Testing/I%20Optimal%20Design%20No%20Centerpoints.jmp) shows the resulting design.
+
+3) We add our 18 centerpoints from variance testing to the front of our design from the previous step and can now analyze the whole thing
+
+- Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing).
+
+### Results

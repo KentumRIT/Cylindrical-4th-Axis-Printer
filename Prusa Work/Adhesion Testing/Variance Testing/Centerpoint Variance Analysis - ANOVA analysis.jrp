@@ -1,0 +1,29 @@
+﻿Local Here(
+	(table1 = New Table( "Centerpoint Variance Analysis",
+		Add Rows( 18 ),
+		New Column( "Mandrel",
+			Numeric,
+			"Nominal",
+			Format( "Best", 12 ),
+			Set Values( [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6] ),
+			Set Display Width( 66 )
+		),
+		New Column( "Adhesion Strength",
+			Numeric,
+			"Continuous",
+			Format( "Best", 12 ),
+			Set Values(
+				[95.7966, 73.6437, 89.306, 73.6957, 48.3121, 85.5775, 54.3339,
+				100.4305, 90.3885, 101.8031, 62.6414, 72.4207, 63.475, 85.4538,
+				82.8521, 103.391, 59.8732, 63.8598]
+			),
+			Set Display Width( 71 )
+		)
+	)) << Run Formulas;
+	table1 << Oneway(
+		Y( :Adhesion Strength ),
+		X( :Mandrel ),
+		Means( 1 ),
+		Mean Diamonds( 1 )
+	);
+)
