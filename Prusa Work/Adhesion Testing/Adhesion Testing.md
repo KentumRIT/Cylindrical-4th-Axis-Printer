@@ -102,25 +102,36 @@ We need a good estimation of our process variance to size our future studies to 
 - 18 samples total, 3 per mandrel
 
 **Statistical Analysis**
-Looking at our results as if we would like to model mandrel-to-mandrel devitation via ANOVA yields:
+Looking at our results, we model using oneway ANOVA:
 
 $SST = SSM + SSE$
 
-Where $SSE$ represents the total error in our model not attributable to mandrel-to-mandrel deviation. We calculate $SSE$ as:
+Here, $SSE$ represents the total error in our model not attributable to mandrel-to-mandrel deviation and is equal to:
 
-$SSE = \sum_{i=1}^{6} \sum_{j=1}^{3} (y_{ij} - \bar{Y}_i)^2$
+$SSE = \sum_{i=1}^{6} \sum_{j=1}^{3} (y_{ij} - \hat{y}_i)^2$
 
-Where $y_{ij}$ represents the adhesion strength of the $j^{th}$ print on mandrel $i$, and $\bar{Y}_i$ represents the group mean for mandrel $i$. We can use this to calculate the mean square error:
+Where $y_{ij}$ represents the adhesion strength of the $j^{th}$ print on mandrel $i$, and $\hat{y}_i$ represents the group mean for mandrel $i$. We can use this to calculate the mean square error:
 
 $MSE = \frac{SSE}{df_E}$
 
-Here $df_E$ reprsents the degrees of freedom of the error, which is equal to the number of samples $18$ minus the number of mandrels $6$, or $12$.
+Here, $df_E$ reprsents the degrees of freedom of the error, which is equal to the number of samples $18$ minus the number of mandrels $6$, or $12$.
+
+<br>
+We can also use this testing to estimate the average size of the mandrel-to-mandrel effect:
+
+$RMS = \sqrt{\frac{1}{6}\sum_{i=1}^6(\hat{y}_i-\bar{y})^2}$
+
+Where $\bar{y}$ represents the average of all samples, our estimate of the population mean.
 
 ### Results
 The mean square error of the process was $187.9832 \text{ lbs}^2$, which gives an RMSE of $13.71069 \text{ lbs}$.
 
+The average RMS associated with the effect of mandrel choice was $12.198 \text{ lbs}$.
+
+The overall average measured ahesion strength was $78.181 \text{ lbs}$
+
 ### Print Settings
-Same as [Factor Level Characterization](#factor-level-characterization).
+Same as [factor level characterization](#print-settings)
 
 ### Printed Geometry
 A 30mm long, 5mm wide, 15mm high bar centered on each mandrel in X and Y
@@ -134,37 +145,41 @@ Identify optimal printing parameters for our process specifically, and identify 
 
 ### Methods
 **Chosen Statistical Structure**
-- RSM I-optimal design using JMP's custom design tool
-- 60 freely chosen points, 12 repeats, and 18 centerpoints from [variance testing](#center-point-variance-testing) for a total of 90 samples
+60 freely chosen points, 12 repeats, and 18 center points from [variance testing](#center-point-variance-testing) for a total of 90 samples
 
 
 **JMP Process**
 *Sample Size Estimation*:
+In JMP's Custom Design tool,
 1) Set optimality criterion to I-optimal.
 2) Add response (adhesion strength) and factors (tested printing parameters).
-3) Decide on the number of samples to try (60 minimum for our set of parameters).
+3) Decide on the number of samples to try (should be divisible by 6 and 60 minimum for our set of parameters).
 4) Add mandrel as a blocking factor with runs per block equal to the number of samples / 6.
-5) Add all RSM terms to model (main effects, 2FI, and 2nd order terms).
-6) Hold center points at 18, then choose a number of replicate runs and enter the previously-decided total number of runs. The blocking factor (mandrel) should now have 6 levels.
-7) Make design, and under power analysis fill in the anticipated RSME and anticipated coefficients as seen in the figure below.
-8) We want to achieve at least 0.8 statistical power - the interdisciplinary standard minimum according to the [literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC7425741/). Repeat steps 3-7 until sufficient power has been achieved.
-\
-    We found that 90 samples with 12 repeats and 18 centerpoints was an adequate size, providing reasonably high statistical power without being an onerous number of samples. Below is the statistical power achieved by this design:
+5) Add all quadratic RSM terms to model (main effects, 2FI, and 2nd order terms) except for the 2nd order term in printing temperature
+6) Hold center points at 18 and replicate runs to 12 and enter the previously-decided total number of runs. The blocking factor (mandrel) should now have 6 levels.
+7) Make design, and under power analysis fill in the anticipated RSME using the [previously calculated value](#results). We assume a minimum effect size of 10 lbs, as this is on the same order as the average mandrel effect from the mean and is roughly 10% of the average measured adhesion strength, which aligns with [NIST guidelines](https://www.itl.nist.gov/div898/handbook/pri/section5/pri5972.htm).
+8) We want to achieve at least 0.8 statistical power - the interdisciplinary standard minimum according to the [literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC7425741/). However, we will lose some statistical power in the next step, so we aim instead for 0.85 as the target minimum in this step. Repeat steps 3-7 until sufficient power has been achieved.
 
-    In [center point testing](#center-point-variance-testing), we found mandrels had an average absolute effect of 10.8152 lbs from the mean. Thus, we aren't interested in identifying effects much smaller than ~5 lbs, as at that size mandrel-to-mandrel deviation will begin to dominate.
+Power analysis for selected experimental design:
+![Power Analysis Results 1](/Optimization%20Testing/Power%20Analysis%201.png)
 
+*Experiment Construction*
+We will use the 18 center points from [variance testing](#center-point-variance-testing) as our center points for this study, so there's no need to generate a study that includes these points. Instead, we generate a study with 60 freely chosen points, 12 repeats, and 0 center points; we will concatenate the 18 center points onto this data set for final analysis. We lose some statistical power because the design tool did not "see" our previously-collected center points. Below is the statistical power of the concatenated design:
+![Power Analysis Results 2](/Optimization%20Testing/Power%20Analysis%202.png)
 
-    
-    
+**Run Construction**
+Each run should have 6 mandrels to not waste time, so runs were taken from mandrel-order in JMP and re-arranged with run 1 having the first run of each mandrel from jump, run 2 having the second run of each mandrel, etc. This [file](/Optimization%20Testing/I%20Optimal%20Design%20No%20Centerpoints.jmp) shows the resulting design.
 
-
-We use the RMSE found in the previous section to identify an acceptable number of samples. A custom design was chosen with I-optimal critera. We selected 12 repeats and 18 centerpoints, then tweaked the number of total samples until sufficient statistical power was achieved. To estimate power, we assume an anticipated coefficient of 10 lbs for all primary effects and 5 lbs (around the same ), and we used the measured effect from variance testing for each mandrel. We decided **90 samples total** was the best middle-ground between catching all main effects and some 2FI and curvature. This [file](/Optimization%20Testing/I%20Optimal%20Design.jmp) shows the JMP analysis and results. Power analysis results are also shown below:
-![Power Analysis Results](/Optimization%20Testing/Power%20Analysis.png)
-
-2) The optimal design created in the previous step is not suitable for our analysis, as the 18 centerpoints created there aren't distributed across our blocking factor (mandrels) evenly like was the case during variance testing. As suggested on this [JMP community board](https://community.jmp.com/t5/Discussions/Custom-Design-Around-Existing-Data-With-Blocking-Factor/m-p/975146/thread-id/110640#M110641), we create a new I-optimal design. This design has the same settings as in step 1, except it has no 0 centerpoints and correspondingly 18 less runs (72 runs). Excluding the previously-collected runs from the custom design optimization shouldn't impact the distribution of other samples much, as the expected response surface variance shouldn't be impacted much by the inclusion of an extra sample location. This [file](/Optimization%20Testing/I%20Optimal%20Design%20No%20Centerpoints.jmp) shows the resulting design.
-
-3) We add our 18 centerpoints from variance testing to the front of our design from the previous step and can now analyze the whole thing
-
-- Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing).
+**ADMET Testing**
+Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing).
 
 ### Results
+
+### Print Settings
+Same as [factor level characterization](#print-settings)
+
+### Printed Geometry
+Same as [variance testing](#printed-geometry-1)
+
+### Experimental Notes
+See this [file](/Optimization%20Testing/Optimal%20Design%20Runs.xlsx).
