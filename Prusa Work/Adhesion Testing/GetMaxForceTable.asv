@@ -1,0 +1,53 @@
+function tbl = GetMaxForceTable(folderpath)
+% - Searches for all .csv files in 'folderpath' that are named following the
+%   convention "Run # Sample #..."
+%
+% - Returns 'tbl', a table of all of the maximum forces
+
+
+files = dir(fullfile(folderpath,'*.csv'));
+
+% Find the range of runs and samples (min sample assumed to be 1)
+min_run = inf;
+max_run = 0;
+max_sample = 0;
+
+for i = 1:length(files)
+    tokens = regexp(files(i).name,...
+        'Run\s+(\d+)\s+Sample\s+(\d+)', 'tokens');
+
+    if ~isempty(tokens)
+        run = str2double(tokens{1}{1});
+        sample = str2double(tokens{1}{2});
+
+        min_run = min(min_run,run);
+        max_run = max(max_run,run);
+        max_sample = max(max_sample,sample);
+    end
+end
+
+
+% Fill in output table
+
+tbl = zeros(1+max_run-min_run,max_sample);
+
+for i = 1:length(files)
+    tokens = regexp(files(i).name,...
+        'Run\s+(\d+)\s+Sample\s+(\d+)', 'tokens');
+    if ~isempty(tokens)
+        run = str2double(tokens{1}{1});
+        sample = str2double(tokens{1}{2});
+
+        filename = fullfile(folderpath, files(i).name);
+        data = readtable(filename,"VariableNamingRule","preserve");
+        
+        force = data.("Load (lb)");
+
+        if ~isempty(force)
+            force_max = max(force);
+            tbl(run,sample) = force_max;
+        end
+    end
+end
+
+end
