@@ -171,7 +171,9 @@ We will use the 18 center points from [variance testing](#center-point-variance-
 Each run should have 6 mandrels to not waste time, so runs were taken from mandrel-order in JMP and re-arranged with run 1 having the first run of each mandrel from jump, run 2 having the second run of each mandrel, etc. This [file](/Optimization%20Testing/I%20Optimal%20Design%20No%20Centerpoints.jmp) shows the resulting design.
 
 **ADMET Testing**
-Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing).
+Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing). With the following modifications:
+- Starting with run 8, pictures were taken of the mesh after plastic detachment
+    - Before run 16 sample 3, when the plastic sample was still attached to the mesh after the ADMET program stopped, I sheared the plastic off the mesh by hand. After 16-3, I used the manual jog on the ADMET to shear the plastic off the mesh at 20 in/min. The first sample for which this was relevant was 16-6, for which I did not observe any qualitative difference between manually-sheared samples.
 
 ### Results
 
