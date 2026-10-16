@@ -172,10 +172,15 @@ Each run should have 6 mandrels to not waste time, so runs were taken from mandr
 
 **ADMET Testing**
 Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing). With the following modifications:
-- Starting with run 8, pictures were taken of the mesh after plastic detachment
+- Starting with run 8 sample 3, pictures were taken of the mesh after plastic detachment
     - Before run 16 sample 3, when the plastic sample was still attached to the mesh after the ADMET program stopped, I sheared the plastic off the mesh by hand. After 16-3, I used the manual jog on the ADMET to shear the plastic off the mesh at 20 in/min. The first sample for which this was relevant was 16-6, for which I did not observe any qualitative difference between manually-sheared samples.
 
+**Model Analysis**
+*Model Reduction*
+Our generated model has all main effects, 2nd order terms, and 2FI. Many of these terms will not have significant impact on adhesion strength, and so are capturing mostly pure error. We wish to remove these terms to improve model power, but don't want to bias our pure error estimate by including real effects even if they're insignificant in our finding. We do this following guidance from the [JMP community forum](https://community.jmp.com/t5/Discussions/removing-terms-from-a-model-following-a-designed-experment/td-p/703191) and [Scientific Computing](https://www.additive-net.de/images/software/minitab/downloads/SCIApr2004MSE.pdf).
+
 ### Results
+
 
 ### Print Settings
 Same as [factor level characterization](#print-settings)
@@ -185,3 +190,5 @@ Same as [variance testing](#printed-geometry-1)
 
 ### Experimental Notes
 See this [file](/Optimization%20Testing/Optimal%20Design%20Runs.xlsx).
+
+
