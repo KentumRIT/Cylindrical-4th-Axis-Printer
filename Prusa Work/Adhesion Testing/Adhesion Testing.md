@@ -172,10 +172,76 @@ Each run should have 6 mandrels to not waste time, so runs were taken from mandr
 
 **ADMET Testing**
 Printing and ADMET testing were carried out in the same manner as in [midpoint variance testing](#midpoint-variance-testing). With the following modifications:
-- Starting with run 8, pictures were taken of the mesh after plastic detachment
+- Starting with run 8 sample 3, pictures were taken of the mesh after plastic detachment
     - Before run 16 sample 3, when the plastic sample was still attached to the mesh after the ADMET program stopped, I sheared the plastic off the mesh by hand. After 16-3, I used the manual jog on the ADMET to shear the plastic off the mesh at 20 in/min. The first sample for which this was relevant was 16-6, for which I did not observe any qualitative difference between manually-sheared samples.
 
+
 ### Results
+This [Minitab article](https://support.minitab.com/en-us/minitab/help-and-how-to/statistical-modeling/doe/how-to/response-surface/analyze-response-surface-design/interpret-the-results/key-results/) explains how to analyze many of the key results presented here.
+
+**Model Overview**
+Main take-aways:
+- Higher temperature decreases the impact of all other factors except speed
+- Higher temperatures yield worse outcomes, which is very unexpected
+- Speed has significant curvature, which was also observed in prior literature 3D printing on textiles
+- Flow does seem to have a saturating effect, though its curvature isn't significant (boarderline though)
+- Ironing has very little effect
+
+![prediction profiler](/Optimization%20Testing/Final%20Model%20JMP%20Results/Full%20Model%20-%20Prediction%20Profiler.png)
+![interaction profiles](/Optimization%20Testing/Final%20Model%20JMP%20Results/Full%20Model%20-%20Interaction%20Profiles.png)
+![effect summary](/Optimization%20Testing/Final%20Model%20JMP%20Results/Effect%20Significance%20-%20Effect%20Summary.png)
+
+**Model Validation**
+*[Model Significance](https://community.jmp.com/t5/Discussions/how-to-read-actual-by-predicted-plot/td-p/390471)*
+Looking at our actual by predicted plot, we see the 95% CI (red region) does not contain the null hypothesis (blue) except for at the model intercept. This indicates at least one significant effect in our model. This is effectively the same as identifying a significant ANOVA prob > F, which we have here below 0.0001.
+![actual by predicted plot](/Optimization%20Testing/Final%20Model%20JMP%20Results/Model%20Significance%20-%20Actual%20by%20Predicted.png)
+![ANOVA analysis](/Optimization%20Testing/Final%20Model%20JMP%20Results/Model%20Significance%20-%20ANOVA.png)
+
+
+
+*[Lack of Fit](https://www.statease.com/blog/understanding-lack-of-fit-when-to-worry/)*
+Our lack of fit test shows error in model prediction (lack of fit MSE) is very close to our pure error term, inidcated by an F ratio close to 1. This means that deviation within our model is nearly entirely explained by pure error, which indicates a well-fit model. This is supported by no significant lack of fit, as the "Prob > F" is not less than 0.05. 
+![lack of fit](/Optimization%20Testing/Final%20Model%20JMP%20Results/Lack%20of%20Fit%20-%20%20Lack%20of%20Fit.png)
+
+
+
+*[Residual Analysis](https://support.minitab.com/en-us/minitab/help-and-how-to/statistical-modeling/doe/how-to/response-surface/analyze-response-surface-design/interpret-the-results/key-results/)*
+Looking first at our residuals by predicted value, points appear roughly evenly distributed around 0, indicating unbiased error. There is no clear linear trend in variance (the residuals do not expand or contract with increasing predicted value). Something to note, however, is that the variance seems to increase around an expected value ranging ~70-85 lbs, which may indicate heteroskedasticity; I won't worry about this for now. See also this [blog](https://danieljhocking.wordpress.com/2011/07/18/model-validation-interpreting-residual-plots/) for description in analysis and this [forum post](https://community.jmp.com/t5/Discussions/Test-for-homo-heteroscedacity-in-JMP/td-p/7737?utm_source=chatgpt.com) for a description of heteroskedasticity test implementation in JMP.
+![residual by predicted](/Optimization%20Testing/Final%20Model%20JMP%20Results/Residual%20Analysis%20-%20Residual%20by%20Predicted.png)
+
+
+We now look to the residuals by run order. Like with residuals by predicted values, points appear randomly distributed around 0, which indicates no autocorrelation. The Durbin-Watson test confirms this, with no significant finding and a value of 1.89 (2 is optimal). Looking at variance, there is no clear trend of increasing or decreasing variance across run order.
+
+Studentized residuals show 5 points outside the -2 to +2 range, indicating potential outliers. None of these samples had process deviations caught by the tester. For now, we note that these points are potential outliers, but do not exclude them without stronger evidence.
+![residual by row](/Optimization%20Testing/Final%20Model%20JMP%20Results/Residual%20Analysis%20-%20Residual%20by%20Row.png)
+![durbin-watson](/Optimization%20Testing/Final%20Model%20JMP%20Results/Residual%20Analysis%20-%20Durbin-Watson.png)
+![studentized residuals](/Optimization%20Testing/Final%20Model%20JMP%20Results/Residual%20Analysis%20-%20Studentized%20Residuals.png)
+
+**[Model Reduction](https://www.researchgate.net/publication/338904251_Response_surface_models_To_reduce_or_not_to_reduce)**
+*Effect Analysis*
+We saw before that our model as a whole contains at least one significant term, so now we now look to the effect summary of our individual model terms. We see seven terms significant to $\alpha = 0.05$: temperature, flow, temperature * z offset, z offset, mandrel, speed curvature, and temperature * flow.
+
+Seven out of 20, or 35% of model terms are insignificant at $\alpha  = 0.05$. Based on this [study](https://www.researchgate.net/publication/338904251_Response_surface_models_To_reduce_or_not_to_reduce), using the full second order model when more than half of the model terms are insignificant tends to reduce model predictive power. Given our five factors and the high percentage of insignificant terms, model reduction should be done by p-value. We throw out all terms with $p > 0.05$, without regard for term heredity (so speed multiplier will not show up, but its curvature will). Keep in mind, that this is only done to get a more accurate estimate of the optimal point; the significance terms and model analysis of the full second order model should be referenced when looking at model validity. The model presented here then is a representation only of what we can be confident to 95% (99.3% actually) in.
+![prediction profiler](/Optimization%20Testing/Final%20Model%20JMP%20Results/Reduced%20Model%20-%20Prediction%20Profiler.png)
+![interaction profiles](/Optimization%20Testing/Final%20Model%20JMP%20Results/Reduced%20Model%20-%20Interaction%20Profiles.png)
+
+The optimal predicted adhesion strength for the full model is $116.28 \pm 13.6161 \text{ lbs}$ and is $113.99 \pm 8.7593 \text{ lbs}$ for the reduced model. The smaller confidence interval is expected for the reduced model. The prediction profiles for both are showed below (in order):
+![full model optimal predicted profiles](/Optimization%20Testing/Final%20Model%20JMP%20Results/Full%20Model%20-%20Optimal%20Prediction.png)
+![reduced model optimal predicted profiles](/Optimization%20Testing/Final%20Model%20JMP%20Results/Reduced%20Model%20-%20Optimal%20Prediction.png)
+
+
+**Optimal Point**
+Given the lack of effect from ironing, it makes sense to exclude it from future experimentation, as it increses print time and G-code complexity. Thus, the optimal parameters we arrive at are:
+- Temp: 240 C
+- Z offset: 0.2 mm
+- Flow multiplier: 2
+- Speed multiplier: 0.45
+- Ironing passes: 0
+
+All factors except for speed are at one bound of their tested domains. This implies that adhesion strength could be futher improved by expanding the tested parameters. However, we will not do this here for a few reasons:
+1) During [factor level characterization](#initial-testing), we saw that print temperatures around and below 220 C caused print failure, so decreasing beyond 240 C will likely hurt us.
+2) Again, during [factor level characterization](#final-testing), we found that Z offsets below 0.2 mm caused deflection of the mandrel during printing, which would significantly increase mandrel-to-mandrel and setup-to-setup variation in part quality. Thus, 0.2 mm will be our minimum here.
+3) While the term wasn't significant, our full model demonstrates curvature in the flow multiplier term with its effect decreasing at higher values. We have good physical reason to believe this will happen as well: there is only so much space between the mesh strands so once we're extruding that amount any extra will not help. Additionally, the more we over-extrude the first layer, the worse our print geometric fidelity will be. We don't want to adhere to unintended regions of the mesh due to plastic 'squeeze out'. Thus, a cap of 2.0 for flow multiplier makes sense.
 
 ### Print Settings
 Same as [factor level characterization](#print-settings)

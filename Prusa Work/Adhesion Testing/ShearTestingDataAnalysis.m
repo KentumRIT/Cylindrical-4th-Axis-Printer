@@ -1,53 +1,29 @@
-folderpath = "D:\Github Stuff\Cylindrical-4th-Axis-Printer\Prusa Work\Adhesion Testing\Variance Testing\Shear Testing Data";
+folderpath = "D:\Github Stuff\Cylindrical-4th-Axis-Printer\Prusa Work\Adhesion Testing\Optimization Testing\Shear Testing Data";
 
-files = dir(fullfile(folderpath,'*.csv'));
+force_max = GetMaxForceTable(folderpath);
 
-% Find the max run and sample number from folder
-max_run=0;
-max_sample = 0;
+% Save results to CSV
+% Get number of runs and samples
+[num_runs, num_samples] = size(force_max);
 
-for i = 1:length(files)
-    tokens = regexp(files(i).name,...
-        'Run\s+(\d+)\s+Sample\s+(\d+)', 'tokens');
+% Generate run and sample indices
+[run_num, sample_num] = ndgrid(1:num_runs, 1:num_samples);
 
-    if ~isempty(tokens)
-        run = str2double(tokens{1}{1});
-        sample = str2double(tokens{1}{2});
+% Create table with Run #, Sample #, and Force
+T = table(run_num(:), sample_num(:), force_max(:), ...
+    'VariableNames', {'Run', 'Mandrel', 'Force'});
 
-        max_run = max(max_run,run);
-        max_sample = max(max_sample,sample);
-    end
-end
+% Write to CSV file
+writetable(T, fullfile("D:\Github Stuff\Cylindrical-4th-Axis-Printer\Prusa Work\Adhesion Testing\Optimization Testing", 'force_max.csv'));
 
-% Read all properly named CSVs in folder (Run # Sample # format)
-data = cell(max_run, max_sample);
 
-for i = 1:length(files)
-    tokens = regexp(files(i).name,...
-        'Run\s+(\d+)\s+Sample\s+(\d+)', 'tokens');
-    if ~isempty(tokens)
-        run = str2double(tokens{1}{1});
-        sample = str2double(tokens{1}{2});
 
-        filename = fullfile(folderpath, files(i).name);
-        data{run, sample} = readtable(filename,"VariableNamingRule","preserve");
-    end
-end
 
-% Get max value for each data
-force_max = zeros(max_run, max_sample);
 
-for run = 1:max_run
-    for sample = 1:max_sample
-        force_max(run, sample) = max(data{run,sample}.("Load (lb)"));
-    end
-end
-
+%{
 % Get average & std.dev of max force across all runs
 avg_max_force = mean(force_max,1);
 stddev_max_force = std(force_max,0,1);  % std.dev of a sample (N-1 weighting)
-
-
 
 % Plot all samples and runs as time series
 figure()
@@ -105,3 +81,4 @@ xlabel('Sample')
 ylabel('Average Maximum Force (lb)')
 
 box on
+%}
