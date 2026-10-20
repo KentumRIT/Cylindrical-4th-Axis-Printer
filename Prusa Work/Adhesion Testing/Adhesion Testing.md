@@ -251,3 +251,19 @@ Same as [variance testing](#printed-geometry-1)
 
 ### Experimental Notes
 See this [file](/Optimization%20Testing/Optimal%20Design%20Runs.xlsx).
+
+## Adhesion Strength Model Verification
+### Purpose
+The optimal point identified by the model developed during [adhesion strength optimization](#results-2) has not been directly tested. We test the optimal point then without adding it to our model to validate the model's results and get an experimental estimate of the adhesion strength at optimal parameters.
+
+### Results
+
+
+### Print Settings
+Same as [factor level characterization](#print-settings)
+
+### Printed Geometry
+Same as [variance testing](#printed-geometry-1)
+
+### Experimental Notes
+Same as [adhesion strength optimization](#experimental-notes-2)
