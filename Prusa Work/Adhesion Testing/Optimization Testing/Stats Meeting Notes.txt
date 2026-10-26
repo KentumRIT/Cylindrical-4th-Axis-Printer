@@ -1,0 +1,5 @@
+P-value approach is probably fine but we also have these:
+AIC criteria for regression removal instead of deleting all non-significant terms
+BIC = beynsian approach
+
+use interaction plots to guide what would be the optimal level for factors
