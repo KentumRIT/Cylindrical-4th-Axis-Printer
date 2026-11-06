@@ -256,9 +256,24 @@ See this [file](/Optimization%20Testing/Optimal%20Design%20Runs.xlsx).
 ### Purpose
 The optimal point identified by the model developed during [adhesion strength optimization](#results-2) has not been directly tested. We test the optimal point then without adding it to our model to validate the model's results and get an experimental estimate of the adhesion strength at optimal parameters.
 
-### Results
+### Methods & Results
 An average of 12 runs (6 per mandrel) at optimal parameters showed an average adhesion strength of $107.911 \text{ lbs}$ with a standard deviation of $19.615 \text { lbs}$. A T-test showed no significant deviation between the measured optimal points and the model's predicted mean of $113.99 \text{ lbs}$; the two-tail p-value was 0.3060. This data verifies model accuracy at least in the optimal domain.
 ![T-test statistics](/Optimization%20Testing/Final%20Model%20JMP%20Results/Verification%20-%20T%20Test.png)
+
+I also printed samples to get images of the attachment region. Samples were randomly distributed across mandrel:
+- 2 samples @ optimal setpoints from [adhesion strength optimization](#results-2)
+- 2 samples @ worst setpoints from full model
+    - print temp: 280 C
+    - print speed: 0.2
+    - Z offset: 0.2
+    - Flow multiplier: 1.5
+    - Ironing: 2 passes
+- samples @ normal printing conditions except Z offset, which comes from [parameter sweep testing](#experimental-notes)
+    - print temp: 220 C
+    - print speed: 1.0
+    - Z offset: 0.2
+    - Flow multiplier: 1.0
+    - Ironing: 0 passes
 
 ### Print Settings
 Same as [factor level characterization](#print-settings)
@@ -268,3 +283,5 @@ Same as [variance testing](#printed-geometry-1)
 
 ### Experimental Notes
 Same as [adhesion strength optimization](#experimental-notes-2)
+
+## Lowering Temperature Bounds

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="202" height="268" viewBox="0 0 202 268">
+ <g stroke="#000000" fill="#000000" font-family="Segoe UI" font-size="12">
+  <g>
+   <clipPath id="clip1">
+    <path d="M0.5,0.5 L0.5,70.5 L165.5,70.5 L165.5,0.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip1)">
+    <g fill="#454547">
+     <rect stroke="none" x="0.5" y="0.5" width="112" height="68"/>
+    </g>
+    <g>
+     <g>
+      <clipPath id="clip2" clip-path="url(#clip1)">
+       <path d="M1,0.5 L1,71 L166,71 L166,0.5 z" clip-rule="evenodd"/>
+      </clipPath>
+      <g clip-path="url(#clip2)">
+       <g>
+        <clipPath id="clip3" clip-path="url(#clip2)">
+         <path d="M0.5,0.5 L0.5,17.5 L112.5,17.5 L112.5,0.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip3)">
+         <text stroke="none" x="3.5" y="14.5">Hypothesized Value</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip4" clip-path="url(#clip2)">
+         <path d="M0.5,17.5 L0.5,34.5 L112.5,34.5 L112.5,17.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip4)">
+         <text stroke="none" x="3.5" y="31.5">Actual Estimate</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip5" clip-path="url(#clip2)">
+         <path d="M0.5,34.5 L0.5,51.5 L112.5,51.5 L112.5,34.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip5)">
+         <text stroke="none" x="3.5" y="48.5">DF</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip6" clip-path="url(#clip2)">
+         <path d="M0.5,51.5 L0.5,68.5 L112.5,68.5 L112.5,51.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip6)">
+         <text stroke="none" x="3.5" y="65.5">Std Dev</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+    <g>
+     <g>
+      <clipPath id="clip7" clip-path="url(#clip1)">
+       <path d="M1,0.5 L1,71 L166,71 L166,0.5 z" clip-rule="evenodd"/>
+      </clipPath>
+      <g clip-path="url(#clip7)">
+       <g>
+        <clipPath id="clip8" clip-path="url(#clip7)">
+         <path d="M112.5,0.5 L112.5,17.5 L164.5,17.5 L164.5,0.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip8)">
+         <text stroke="none" x="161.5" y="14.5" text-anchor="end">113.99</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip9" clip-path="url(#clip7)">
+         <path d="M112.5,17.5 L112.5,34.5 L164.5,34.5 L164.5,17.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip9)">
+         <text stroke="none" x="161.5" y="31.5" text-anchor="end">107.911</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip10" clip-path="url(#clip7)">
+         <path d="M112.5,34.5 L112.5,51.5 L164.5,51.5 L164.5,34.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip10)">
+         <text stroke="none" x="161.5" y="48.5" text-anchor="end">11</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip11" clip-path="url(#clip7)">
+         <path d="M112.5,51.5 L112.5,68.5 L164.5,68.5 L164.5,51.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip11)">
+         <text stroke="none" x="161.5" y="65.5" text-anchor="end">19.6145</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g>
+   <clipPath id="clip12">
+    <path d="M0.5,70.5 L0.5,157.5 L126.5,157.5 L126.5,70.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip12)">
+    <g fill="#454547">
+     <rect stroke="none" x="0.5" y="87.5" width="73" height="68"/>
+    </g>
+    <g>
+     <g fill="#454547">
+      <rect stroke="none" x="0.5" y="70.5" width="73" height="16"/>
+     </g>
+     <g font-weight="bold">
+      <text stroke="none" x="3.5" y="86.5" dy="-3.01"> </text>
+     </g>
+     <g>
+      <clipPath id="clip13" clip-path="url(#clip12)">
+       <path d="M1,87.5 L1,158 L127,158 L127,87.5 z" clip-rule="evenodd"/>
+      </clipPath>
+      <g clip-path="url(#clip13)">
+       <g>
+        <clipPath id="clip14" clip-path="url(#clip13)">
+         <path d="M0.5,87.5 L0.5,104.5 L73.5,104.5 L73.5,87.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip14)">
+         <text stroke="none" x="3.5" y="101.5">Test Statistic</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip15" clip-path="url(#clip13)">
+         <path d="M0.5,104.5 L0.5,121.5 L73.5,121.5 L73.5,104.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip15)">
+         <text stroke="none" x="3.5" y="118.5">Prob &gt; |t|</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip16" clip-path="url(#clip13)">
+         <path d="M0.5,121.5 L0.5,138.5 L73.5,138.5 L73.5,121.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip16)">
+         <text stroke="none" x="3.5" y="135.5">Prob &gt; t</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip17" clip-path="url(#clip13)">
+         <path d="M0.5,138.5 L0.5,155.5 L73.5,155.5 L73.5,138.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip17)">
+         <text stroke="none" x="3.5" y="152.5">Prob &lt; t</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+    <g>
+     <g fill="#454547">
+      <rect stroke="none" x="73.5" y="70.5" width="52" height="16"/>
+     </g>
+     <g stroke="#373737">
+      <path fill="none" d="M73.5,70.5 L73.5,86.5"/>
+     </g>
+     <g font-weight="bold">
+      <text stroke="none" x="122.5" y="86.5" dy="-3.01" text-anchor="end">t Test</text>
+     </g>
+     <g>
+      <clipPath id="clip18" clip-path="url(#clip12)">
+       <path d="M1,87.5 L1,158 L127,158 L127,87.5 z" clip-rule="evenodd"/>
+      </clipPath>
+      <g clip-path="url(#clip18)">
+       <g>
+        <clipPath id="clip19" clip-path="url(#clip18)">
+         <path d="M73.5,87.5 L73.5,104.5 L125.5,104.5 L125.5,87.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip19)">
+         <text stroke="none" x="122.5" y="101.5" text-anchor="end">-1.0737</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+    <g>
+     <g>
+      <clipPath id="clip20" clip-path="url(#clip12)">
+       <path d="M1,104.5 L1,158 L127,158 L127,104.5 z" clip-rule="evenodd"/>
+      </clipPath>
+      <g clip-path="url(#clip20)">
+       <g>
+        <clipPath id="clip21" clip-path="url(#clip20)">
+         <path d="M73.5,104.5 L73.5,121.5 L125.5,121.5 L125.5,104.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip21)">
+         <text stroke="none" x="116.5" y="118.5" text-anchor="end">0.3060</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip22" clip-path="url(#clip20)">
+         <path d="M73.5,121.5 L73.5,138.5 L125.5,138.5 L125.5,121.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip22)">
+         <text stroke="none" x="116.5" y="135.5" text-anchor="end">0.8470</text>
+        </g>
+       </g>
+       <g>
+        <clipPath id="clip23" clip-path="url(#clip20)">
+         <path d="M73.5,138.5 L73.5,155.5 L125.5,155.5 L125.5,138.5 z" clip-rule="evenodd"/>
+        </clipPath>
+        <g clip-path="url(#clip23)">
+         <text stroke="none" x="116.5" y="152.5" text-anchor="end">0.1530</text>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g>
+   <g>
+    <clipPath id="clip24">
+     <path d="M11.5,162.5 L11.5,235.5 L193.5,235.5 L193.5,162.5 z" clip-rule="evenodd"/>
+    </clipPath>
+    <g clip-path="url(#clip24)">
+     <g stroke="#2867FD">
+      <path fill="none" d="M12.5,234.47 L23.75,233.34 L35,231.02 L46.25,226.48 L51.88,222.94 L57.5,218.32 L63.12,212.5 L68.75,205.47 L80,188.88 L85.63,180.48 L91.25,173.17 L96.87,167.89 L102.5,165.43 L108.13,166.15 L113.75,169.94 L119.38,176.24 L125,184.16 L136.25,201.14 L141.88,208.76 L147.5,215.26 L153.13,220.53 L158.75,224.65 L170,230.04 L181.25,232.85 L192.5,234.24"/>
+     </g>
+     <g stroke="#05A1D2" fill="#05A1D2">
+      <path stroke="none" d="M133.36,196.9 L140.75,207.32 L148.15,215.92 L155.54,222.43 L162.93,227.04 L170.32,230.15 L177.72,232.17 L192.5,234.24 L192.5,235.5 L133.36,235.5" fill-rule="evenodd"/>
+     </g>
+     <g stroke="#2867FD" fill="#2867FD">
+      <path stroke="none" d="M12.5,234.47 L28.06,232.64 L35.84,230.77 L43.62,227.81 L51.4,223.28 L59.18,216.71 L66.96,207.83 L74.74,196.9 L74.74,235.5 L12.5,235.5" fill-rule="evenodd"/>
+      <path fill="none" d="M104.05,235.5 L104.05,165.3"/>
+     </g>
+     <g stroke="#F03246" fill="#2867FD">
+      <path fill="none" d="M74.74,235.5 L74.74,196.9"/>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g stroke-linecap="square" stroke="#FFFFFF">
+   <path fill="none" d="M192.5,235.5 L12.5,235.5"/>
+  </g>
+  <g>
+   <clipPath id="clip25">
+    <path d="M2.5,235.5 L2.5,260.5 L203.5,260.5 L203.5,235.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip25)">
+    <g stroke="#A5A5A5">
+     <path fill="none" d="M12.5,235.5 L12.5,238.5"/>
+     <path fill="none" d="M60.5,235.5 L60.5,238.5"/>
+     <path fill="none" d="M108.5,235.5 L108.5,238.5"/>
+     <path fill="none" d="M157.5,235.5 L157.5,238.5"/>
+     <path fill="none" d="M36.5,235.5 L36.5,241.5"/>
+     <path fill="none" d="M84.5,235.5 L84.5,241.5"/>
+     <path fill="none" d="M133.5,235.5 L133.5,241.5"/>
+     <path fill="none" d="M181.5,235.5 L181.5,241.5"/>
+    </g>
+    <text stroke="none" x="36.5" y="243.5" dy="12.95" text-anchor="middle">100</text>
+    <text stroke="none" x="84.5" y="243.5" dy="12.95" text-anchor="middle">110</text>
+    <text stroke="none" x="133.5" y="243.5" dy="12.95" text-anchor="middle">120</text>
+    <text stroke="none" x="181.5" y="243.5" dy="12.95" text-anchor="middle">130</text>
+   </g>
+  </g>
+  <g>
+   <clipPath id="clip26">
+    <path d="M2.5,235.5 L2.5,260.5 L203.5,260.5 L203.5,235.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip26)"/>
+  </g>
+ </g>
+</svg>

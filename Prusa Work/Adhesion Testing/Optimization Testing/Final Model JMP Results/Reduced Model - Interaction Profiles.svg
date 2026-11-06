@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="418.57031"
+   height="366.00391"
+   viewBox="0 0 418.57031 366.00391"
+   version="1.1"
+   id="svg317"
+   sodipodi:docname="Reduced Model - Interaction Profiles.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:export-filename="Reduced Model - Interaction Profiles.png"
+   inkscape:export-xdpi="275.22256"
+   inkscape:export-ydpi="275.22256"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs317" />
+  <sodipodi:namedview
+     id="namedview317"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0855615"
+     inkscape:cx="289.25123"
+     inkscape:cy="110.08128"
+     inkscape:window-width="2100"
+     inkscape:window-height="1225"
+     inkscape:window-x="4792"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg317" />
+  <g
+     stroke="#000000"
+     fill="#000000"
+     font-family="'Segoe UI'"
+     font-size="12px"
+     id="g317"
+     transform="translate(-46.429687)">
+    <g
+       id="g10">
+      <clipPath
+         id="clip1">
+        <path
+           d="m 5.5,-3.5 v 93 h 68 v -93 z"
+           clip-rule="evenodd"
+           id="path1" />
+      </clipPath>
+      <g
+         clip-path="url(#clip1)"
+         id="g9">
+        <g
+           stroke="#a5a5a5"
+           id="g7">
+          <path
+             fill="none"
+             d="m 66.5,71.5 h 6"
+             id="path2" />
+          <path
+             fill="none"
+             d="m 66.5,59.5 h 6"
+             id="path3" />
+          <path
+             fill="none"
+             d="m 66.5,47.5 h 6"
+             id="path4" />
+          <path
+             fill="none"
+             d="m 66.5,35.5 h 6"
+             id="path5" />
+          <path
+             fill="none"
+             d="m 66.5,23.5 h 6"
+             id="path6" />
+          <path
+             fill="none"
+             d="m 66.5,11.5 h 6"
+             id="path7" />
+        </g>
+        <text
+           stroke="none"
+           x="64.5"
+           y="71.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text7">20</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="47.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text8">60</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="23.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text9">100</text>
+      </g>
+    </g>
+    <g
+       fill="#ffffff"
+       id="g89"
+       transform="translate(0,-84.027275)">
+      <rect
+         stroke="none"
+         x="72.5"
+         y="252.5"
+         width="98"
+         height="84"
+         id="rect88" />
+      <rect
+         stroke="none"
+         x="79.5"
+         y="258.5"
+         width="84"
+         height="72"
+         id="rect89" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g123"
+       transform="translate(0.16284381,0.16284356)">
+      <rect
+         stroke="none"
+         x="170.5"
+         y="0.5"
+         width="98"
+         height="84"
+         id="rect122" />
+      <rect
+         stroke="none"
+         x="177.5"
+         y="6.5"
+         width="84"
+         height="72"
+         id="rect123" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g239"
+       transform="translate(-97.64532)">
+      <rect
+         stroke="none"
+         x="366.5"
+         y="0.5"
+         width="98"
+         height="84"
+         id="rect238" />
+      <rect
+         stroke="none"
+         x="373.5"
+         y="6.5"
+         width="84"
+         height="72"
+         id="rect239" />
+    </g>
+    <g
+       id="g26">
+      <clipPath
+         id="clip3">
+        <path
+           d="m 5.5,80.5 v 93 h 68 v -93 z"
+           clip-rule="evenodd"
+           id="path17" />
+      </clipPath>
+      <g
+         clip-path="url(#clip3)"
+         id="g25">
+        <g
+           stroke="#a5a5a5"
+           id="g23">
+          <path
+             fill="none"
+             d="m 66.5,155.5 h 6"
+             id="path18" />
+          <path
+             fill="none"
+             d="m 66.5,143.5 h 6"
+             id="path19" />
+          <path
+             fill="none"
+             d="m 66.5,131.5 h 6"
+             id="path20" />
+          <path
+             fill="none"
+             d="m 66.5,119.5 h 6"
+             id="path21" />
+          <path
+             fill="none"
+             d="m 66.5,107.5 h 6"
+             id="path22" />
+          <path
+             fill="none"
+             d="m 66.5,95.5 h 6"
+             id="path23" />
+        </g>
+        <text
+           stroke="none"
+           x="64.5"
+           y="155.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text23">20</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="131.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text24">60</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="107.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text25">100</text>
+      </g>
+    </g>
+    <g
+       id="g42">
+      <clipPath
+         id="clip5">
+        <path
+           d="m 5.5,164.5 v 93 h 68 v -93 z"
+           clip-rule="evenodd"
+           id="path33" />
+      </clipPath>
+      <g
+         clip-path="url(#clip5)"
+         id="g41">
+        <g
+           stroke="#a5a5a5"
+           id="g39">
+          <path
+             fill="none"
+             d="m 66.5,239.5 h 6"
+             id="path34" />
+          <path
+             fill="none"
+             d="m 66.5,227.5 h 6"
+             id="path35" />
+          <path
+             fill="none"
+             d="m 66.5,215.5 h 6"
+             id="path36" />
+          <path
+             fill="none"
+             d="m 66.5,203.5 h 6"
+             id="path37" />
+          <path
+             fill="none"
+             d="m 66.5,191.5 h 6"
+             id="path38" />
+          <path
+             fill="none"
+             d="m 66.5,179.5 h 6"
+             id="path39" />
+        </g>
+        <text
+           stroke="none"
+           x="64.5"
+           y="239.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text39">20</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="215.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text40">60</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="191.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text41">100</text>
+      </g>
+    </g>
+    <g
+       id="g58">
+      <clipPath
+         id="clip7">
+        <path
+           d="m 5.5,248.5 v 93 h 68 v -93 z"
+           clip-rule="evenodd"
+           id="path49" />
+      </clipPath>
+      <g
+         clip-path="url(#clip7)"
+         id="g57">
+        <g
+           stroke="#a5a5a5"
+           id="g55">
+          <path
+             fill="none"
+             d="m 66.5,323.5 h 6"
+             id="path50" />
+          <path
+             fill="none"
+             d="m 66.5,311.5 h 6"
+             id="path51" />
+          <path
+             fill="none"
+             d="m 66.5,299.5 h 6"
+             id="path52" />
+          <path
+             fill="none"
+             d="m 66.5,287.5 h 6"
+             id="path53" />
+          <path
+             fill="none"
+             d="m 66.5,275.5 h 6"
+             id="path54" />
+          <path
+             fill="none"
+             d="m 66.5,263.5 h 6"
+             id="path55" />
+        </g>
+        <text
+           stroke="none"
+           x="64.5"
+           y="323.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text55">20</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="299.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text56">60</text>
+        <text
+           stroke="none"
+           x="64.5"
+           y="275.5"
+           dy="4.9699998"
+           text-anchor="end"
+           id="text57">100</text>
+      </g>
+    </g>
+    <g
+       fill="#ffffff"
+       id="g66">
+      <rect
+         stroke="none"
+         x="72.5"
+         y="0.5"
+         width="98"
+         height="84"
+         id="rect65" />
+      <rect
+         stroke="none"
+         x="79.5"
+         y="6.5"
+         width="84"
+         height="72"
+         id="rect66" />
+    </g>
+    <g
+       id="g69">
+      <g
+         id="g68">
+        <clipPath
+           id="clip9">
+          <path
+             d="m 79.5,6.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path66" />
+        </clipPath>
+        <g
+           clip-path="url(#clip9)"
+           id="g67">
+          <text
+             stroke="none"
+             x="121.5"
+             y="42.5"
+             text-anchor="middle"
+             id="text66">Printing</text>
+          <text
+             stroke="none"
+             x="121.5"
+             y="54.5"
+             text-anchor="middle"
+             id="text67">Temperature</text>
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g70">
+      <path
+         fill="none"
+         d="m 72.5,84.5 v -84 h 98 v 84 h -98"
+         id="path69" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g71"
+       transform="translate(0,0.16284365)">
+      <rect
+         stroke="none"
+         x="72.5"
+         y="84.5"
+         width="98"
+         height="84"
+         id="rect70" />
+      <rect
+         stroke="none"
+         x="79.5"
+         y="90.5"
+         width="84"
+         height="72"
+         id="rect71" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g79">
+      <path
+         fill="none"
+         d="m 72.5,168.5 v -84 h 98 v 84 h -98"
+         id="path78" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g80"
+       transform="translate(0.16284356,84.190119)">
+      <rect
+         stroke="none"
+         x="72.5"
+         y="168.5"
+         width="98"
+         height="84"
+         id="rect79" />
+      <rect
+         stroke="none"
+         x="79.5"
+         y="174.5"
+         width="84"
+         height="72"
+         id="rect80" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g88">
+      <path
+         fill="none"
+         d="m 72.5,252.5 v -84 h 98 v 84 h -98"
+         id="path87" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g97">
+      <path
+         fill="none"
+         d="m 72.5,336.5 v -84 h 98 v 84 h -98"
+         id="path96" />
+    </g>
+    <g
+       id="g120">
+      <clipPath
+         id="clip13">
+        <path
+           d="m 69.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path97" />
+      </clipPath>
+      <g
+         clip-path="url(#clip13)"
+         id="g119">
+        <g
+           stroke="#a5a5a5"
+           id="g107">
+          <path
+             fill="none"
+             d="m 88.5,336.5 v 3"
+             id="path98" />
+          <path
+             fill="none"
+             d="m 105.5,336.5 v 3"
+             id="path99" />
+          <path
+             fill="none"
+             d="m 123.5,336.5 v 3"
+             id="path100" />
+          <path
+             fill="none"
+             d="m 140.5,336.5 v 3"
+             id="path101" />
+          <path
+             fill="none"
+             d="m 158.5,336.5 v 3"
+             id="path102" />
+          <path
+             fill="none"
+             d="m 79.5,336.5 v 6"
+             id="path103" />
+          <path
+             fill="none"
+             d="m 97.5,336.5 v 6"
+             id="path104" />
+          <path
+             fill="none"
+             d="m 114.5,336.5 v 6"
+             id="path105" />
+          <path
+             fill="none"
+             d="m 132.5,336.5 v 6"
+             id="path106" />
+          <path
+             fill="none"
+             d="m 149.5,336.5 v 6"
+             id="path107" />
+        </g>
+        <g
+           id="g118">
+          <g
+             transform="translate(79.5,344.5)"
+             id="g109">
+            <g
+               transform="rotate(-90)"
+               id="g108">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text107">240</text>
+            </g>
+          </g>
+          <g
+             transform="translate(97.5,344.5)"
+             id="g111">
+            <g
+               transform="rotate(-90)"
+               id="g110">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text109">250</text>
+            </g>
+          </g>
+          <g
+             transform="translate(114.5,344.5)"
+             id="g113">
+            <g
+               transform="rotate(-90)"
+               id="g112">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text111">260</text>
+            </g>
+          </g>
+          <g
+             transform="translate(132.5,344.5)"
+             id="g115">
+            <g
+               transform="rotate(-90)"
+               id="g114">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text113">270</text>
+            </g>
+          </g>
+          <g
+             transform="translate(149.5,344.5)"
+             id="g117">
+            <g
+               transform="rotate(-90)"
+               id="g116">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text115">280</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g122">
+      <clipPath
+         id="clip14">
+        <path
+           d="m 69.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path120" />
+      </clipPath>
+      <g
+         clip-path="url(#clip14)"
+         id="g121" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g131">
+      <path
+         fill="none"
+         d="m 170.5,84.5 v -84 h 98 v 84 h -98"
+         id="path130" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g132">
+      <rect
+         stroke="none"
+         x="170.5"
+         y="84.5"
+         width="98"
+         height="84"
+         id="rect131" />
+      <rect
+         stroke="none"
+         x="177.5"
+         y="90.5"
+         width="84"
+         height="72"
+         id="rect132" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g136">
+      <path
+         fill="none"
+         d="m 170.5,168.5 v -84 h 98 v 84 h -98"
+         id="path135" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g137">
+      <rect
+         stroke="none"
+         x="170.5"
+         y="168.5"
+         width="98"
+         height="84"
+         id="rect136" />
+      <rect
+         stroke="none"
+         x="177.5"
+         y="174.5"
+         width="84"
+         height="72"
+         id="rect137" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g145">
+      <path
+         fill="none"
+         d="m 170.5,252.5 v -84 h 98 v 84 h -98"
+         id="path144" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g146">
+      <rect
+         stroke="none"
+         x="170.5"
+         y="252.5"
+         width="98"
+         height="84"
+         id="rect145" />
+      <rect
+         stroke="none"
+         x="177.5"
+         y="258.5"
+         width="84"
+         height="72"
+         id="rect146" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g154">
+      <path
+         fill="none"
+         d="m 170.5,336.5 v -84 h 98 v 84 h -98"
+         id="path153" />
+    </g>
+    <g
+       id="g178"
+       transform="translate(98)">
+      <clipPath
+         id="clip19">
+        <path
+           d="m 167.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path154" />
+      </clipPath>
+      <g
+         clip-path="url(#clip19)"
+         id="g177">
+        <g
+           stroke="#a5a5a5"
+           id="g161">
+          <path
+             fill="none"
+             d="m 177.5,336.5 v 6"
+             id="path155" />
+          <path
+             fill="none"
+             d="m 191.5,336.5 v 6"
+             id="path156" />
+          <path
+             fill="none"
+             d="m 205.5,336.5 v 6"
+             id="path157" />
+          <path
+             fill="none"
+             d="m 219.5,336.5 v 6"
+             id="path158" />
+          <path
+             fill="none"
+             d="m 233.5,336.5 v 6"
+             id="path159" />
+          <path
+             fill="none"
+             d="m 247.5,336.5 v 6"
+             id="path160" />
+          <path
+             fill="none"
+             d="m 261.5,336.5 v 6"
+             id="path161" />
+        </g>
+        <g
+           id="g176">
+          <g
+             transform="translate(177.5,344.5)"
+             id="g163">
+            <g
+               transform="rotate(-90)"
+               id="g162">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text161">0.2</text>
+            </g>
+          </g>
+          <g
+             transform="translate(191.5,344.5)"
+             id="g165">
+            <g
+               transform="rotate(-90)"
+               id="g164">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text163">0.22</text>
+            </g>
+          </g>
+          <g
+             transform="translate(205.5,344.5)"
+             id="g167">
+            <g
+               transform="rotate(-90)"
+               id="g166">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text165">0.24</text>
+            </g>
+          </g>
+          <g
+             transform="translate(219.5,344.5)"
+             id="g169">
+            <g
+               transform="rotate(-90)"
+               id="g168">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text167">0.26</text>
+            </g>
+          </g>
+          <g
+             transform="translate(233.5,344.5)"
+             id="g171">
+            <g
+               transform="rotate(-90)"
+               id="g170">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text169">0.28</text>
+            </g>
+          </g>
+          <g
+             transform="translate(247.5,344.5)"
+             id="g173">
+            <g
+               transform="rotate(-90)"
+               id="g172">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text171">0.3</text>
+            </g>
+          </g>
+          <g
+             transform="translate(261.5,344.5)"
+             id="g175">
+            <g
+               transform="rotate(-90)"
+               id="g174">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text173">0.32</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g180">
+      <clipPath
+         id="clip20">
+        <path
+           d="m 167.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path178" />
+      </clipPath>
+      <g
+         clip-path="url(#clip20)"
+         id="g179" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g181"
+       transform="translate(98.105911,0.46059113)">
+      <rect
+         stroke="none"
+         x="268.5"
+         y="0.5"
+         width="98"
+         height="84"
+         id="rect180" />
+      <rect
+         stroke="none"
+         x="275.5"
+         y="6.5"
+         width="84"
+         height="72"
+         id="rect181" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g189">
+      <path
+         fill="none"
+         d="m 268.5,84.5 v -84 h 98 v 84 h -98"
+         id="path188" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g190">
+      <rect
+         stroke="none"
+         x="268.5"
+         y="84.5"
+         width="98"
+         height="84"
+         id="rect189" />
+      <rect
+         stroke="none"
+         x="275.5"
+         y="90.5"
+         width="84"
+         height="72"
+         id="rect190" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g198">
+      <path
+         fill="none"
+         d="m 268.5,168.5 v -84 h 98 v 84 h -98"
+         id="path197" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g199">
+      <rect
+         stroke="none"
+         x="268.5"
+         y="168.5"
+         width="98"
+         height="84"
+         id="rect198" />
+      <rect
+         stroke="none"
+         x="275.5"
+         y="174.5"
+         width="84"
+         height="72"
+         id="rect199" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g203">
+      <path
+         fill="none"
+         d="m 268.5,252.5 v -84 h 98 v 84 h -98"
+         id="path202" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g204">
+      <rect
+         stroke="none"
+         x="268.5"
+         y="252.5"
+         width="98"
+         height="84"
+         id="rect203" />
+      <rect
+         stroke="none"
+         x="275.5"
+         y="258.5"
+         width="84"
+         height="72"
+         id="rect204" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g212">
+      <path
+         fill="none"
+         d="m 268.5,336.5 v -84 h 98 v 84 h -98"
+         id="path211" />
+    </g>
+    <g
+       id="g236"
+       transform="translate(98)">
+      <clipPath
+         id="clip25">
+        <path
+           d="m 265.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path212" />
+      </clipPath>
+      <g
+         clip-path="url(#clip25)"
+         id="g235">
+        <g
+           stroke="#a5a5a5"
+           id="g219">
+          <path
+             fill="none"
+             d="m 275.5,336.5 v 6"
+             id="path213" />
+          <path
+             fill="none"
+             d="m 289.5,336.5 v 6"
+             id="path214" />
+          <path
+             fill="none"
+             d="m 303.5,336.5 v 6"
+             id="path215" />
+          <path
+             fill="none"
+             d="m 317.5,336.5 v 6"
+             id="path216" />
+          <path
+             fill="none"
+             d="m 331.5,336.5 v 6"
+             id="path217" />
+          <path
+             fill="none"
+             d="m 345.5,336.5 v 6"
+             id="path218" />
+          <path
+             fill="none"
+             d="m 359.5,336.5 v 6"
+             id="path219" />
+        </g>
+        <g
+           id="g234">
+          <g
+             transform="translate(275.5,344.5)"
+             id="g221">
+            <g
+               transform="rotate(-90)"
+               id="g220">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text219">1.5</text>
+            </g>
+          </g>
+          <g
+             transform="translate(289.5,344.5)"
+             id="g223">
+            <g
+               transform="rotate(-90)"
+               id="g222">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text221">1.6</text>
+            </g>
+          </g>
+          <g
+             transform="translate(303.5,344.5)"
+             id="g225">
+            <g
+               transform="rotate(-90)"
+               id="g224">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text223">1.7</text>
+            </g>
+          </g>
+          <g
+             transform="translate(317.5,344.5)"
+             id="g227">
+            <g
+               transform="rotate(-90)"
+               id="g226">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text225">1.8</text>
+            </g>
+          </g>
+          <g
+             transform="translate(331.5,344.5)"
+             id="g229">
+            <g
+               transform="rotate(-90)"
+               id="g228">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text227">1.9</text>
+            </g>
+          </g>
+          <g
+             transform="translate(345.5,344.5)"
+             id="g231">
+            <g
+               transform="rotate(-90)"
+               id="g230">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text229">2</text>
+            </g>
+          </g>
+          <g
+             transform="translate(359.5,344.5)"
+             id="g233">
+            <g
+               transform="rotate(-90)"
+               id="g232">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text231">2.1</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g238">
+      <clipPath
+         id="clip26">
+        <path
+           d="m 265.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path236" />
+      </clipPath>
+      <g
+         clip-path="url(#clip26)"
+         id="g237" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g247">
+      <path
+         fill="none"
+         d="m 366.5,84.5 v -84 h 98 v 84 h -98"
+         id="path246" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g248">
+      <rect
+         stroke="none"
+         x="366.5"
+         y="84.5"
+         width="98"
+         height="84"
+         id="rect247" />
+      <rect
+         stroke="none"
+         x="373.5"
+         y="90.5"
+         width="84"
+         height="72"
+         id="rect248" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g256">
+      <path
+         fill="none"
+         d="m 366.5,168.5 v -84 h 98 v 84 h -98"
+         id="path255" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g257">
+      <rect
+         stroke="none"
+         x="366.5"
+         y="168.5"
+         width="98"
+         height="84"
+         id="rect256" />
+      <rect
+         stroke="none"
+         x="373.5"
+         y="174.5"
+         width="84"
+         height="72"
+         id="rect257" />
+    </g>
+    <g
+       id="g135"
+       transform="translate(97.64532,88.433497)">
+      <g
+         id="g134">
+        <clipPath
+           id="clip16">
+          <path
+             d="m 177.5,90.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path132" />
+        </clipPath>
+        <g
+           clip-path="url(#clip16)"
+           id="g133">
+          <text
+             stroke="none"
+             x="219.5"
+             y="126.5"
+             text-anchor="middle"
+             id="text132">Z Offset</text>
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g265">
+      <path
+         fill="none"
+         d="m 366.5,252.5 v -84 h 98 v 84 h -98"
+         id="path264" />
+    </g>
+    <g
+       fill="#ffffff"
+       id="g266">
+      <rect
+         stroke="none"
+         x="366.5"
+         y="252.5"
+         width="98"
+         height="84"
+         id="rect265" />
+      <rect
+         stroke="none"
+         x="373.5"
+         y="258.5"
+         width="84"
+         height="72"
+         id="rect266" />
+    </g>
+    <g
+       id="g269"
+       transform="translate(-196.67242,-173.18227)">
+      <g
+         id="g268">
+        <clipPath
+           id="clip30">
+          <path
+             d="m 373.5,258.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path266" />
+        </clipPath>
+        <g
+           clip-path="url(#clip30)"
+           id="g267">
+          <text
+             stroke="none"
+             x="415.5"
+             y="294.5"
+             text-anchor="middle"
+             id="text266">Speed</text>
+          <text
+             stroke="none"
+             x="415.5"
+             y="306.5"
+             text-anchor="middle"
+             id="text267">Multiplier</text>
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g270">
+      <path
+         fill="none"
+         d="m 366.5,336.5 v -84 h 98 v 84 h -98"
+         id="path269" />
+    </g>
+    <g
+       id="g294"
+       transform="translate(-196)">
+      <clipPath
+         id="clip31">
+        <path
+           d="m 363.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path270" />
+      </clipPath>
+      <g
+         clip-path="url(#clip31)"
+         id="g293">
+        <g
+           stroke="#a5a5a5"
+           id="g277">
+          <path
+             fill="none"
+             d="m 373.5,336.5 v 6"
+             id="path271" />
+          <path
+             fill="none"
+             d="m 387.5,336.5 v 6"
+             id="path272" />
+          <path
+             fill="none"
+             d="m 401.5,336.5 v 6"
+             id="path273" />
+          <path
+             fill="none"
+             d="m 415.5,336.5 v 6"
+             id="path274" />
+          <path
+             fill="none"
+             d="m 429.5,336.5 v 6"
+             id="path275" />
+          <path
+             fill="none"
+             d="m 443.5,336.5 v 6"
+             id="path276" />
+          <path
+             fill="none"
+             d="m 457.5,336.5 v 6"
+             id="path277" />
+        </g>
+        <g
+           id="g292">
+          <g
+             transform="translate(373.5,344.5)"
+             id="g279">
+            <g
+               transform="rotate(-90)"
+               id="g278">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text277">0.2</text>
+            </g>
+          </g>
+          <g
+             transform="translate(387.5,344.5)"
+             id="g281">
+            <g
+               transform="rotate(-90)"
+               id="g280">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text279">0.3</text>
+            </g>
+          </g>
+          <g
+             transform="translate(401.5,344.5)"
+             id="g283">
+            <g
+               transform="rotate(-90)"
+               id="g282">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text281">0.4</text>
+            </g>
+          </g>
+          <g
+             transform="translate(415.5,344.5)"
+             id="g285">
+            <g
+               transform="rotate(-90)"
+               id="g284">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text283">0.5</text>
+            </g>
+          </g>
+          <g
+             transform="translate(429.5,344.5)"
+             id="g287">
+            <g
+               transform="rotate(-90)"
+               id="g286">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text285">0.6</text>
+            </g>
+          </g>
+          <g
+             transform="translate(443.5,344.5)"
+             id="g289">
+            <g
+               transform="rotate(-90)"
+               id="g288">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text287">0.7</text>
+            </g>
+          </g>
+          <g
+             transform="translate(457.5,344.5)"
+             id="g291">
+            <g
+               transform="rotate(-90)"
+               id="g290">
+              <text
+                 stroke="none"
+                 dy="4.9699998"
+                 text-anchor="end"
+                 id="text289">0.8</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g296">
+      <clipPath
+         id="clip32">
+        <path
+           d="m 363.5,336.5 v 32 h 105 v -32 z"
+           clip-rule="evenodd"
+           id="path294" />
+      </clipPath>
+      <g
+         clip-path="url(#clip32)"
+         id="g295" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g301">
+      <path
+         fill="none"
+         d="M 464.5,84.5 V 0.5"
+         id="path300" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g306">
+      <path
+         fill="none"
+         d="m 464.5,168.5 v -84"
+         id="path305" />
+    </g>
+    <g
+       id="g202"
+       transform="translate(96.724133,80.142858)">
+      <g
+         id="g201">
+        <clipPath
+           id="clip23">
+          <path
+             d="m 275.5,174.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path199" />
+        </clipPath>
+        <g
+           clip-path="url(#clip23)"
+           id="g200">
+          <text
+             stroke="none"
+             x="317.5"
+             y="210.5"
+             text-anchor="middle"
+             id="text199">Flow</text>
+          <text
+             stroke="none"
+             x="317.5"
+             y="222.5"
+             text-anchor="middle"
+             id="text200">Multiplier</text>
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g311">
+      <path
+         fill="none"
+         d="m 464.5,252.5 v -84"
+         id="path310" />
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#a5a5a5"
+       id="g316">
+      <path
+         fill="none"
+         d="m 464.5,336.5 v -84"
+         id="path315" />
+    </g>
+    <g
+       id="g188"
+       transform="translate(98.105911,0.46059113)">
+      <g
+         id="g187">
+        <clipPath
+           id="clip21">
+          <path
+             d="m 275.5,6.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path181" />
+        </clipPath>
+        <g
+           clip-path="url(#clip21)"
+           id="g186">
+          <g
+             stroke="#d44958"
+             id="g182">
+            <path
+               fill="none"
+               d="m 275.5,41.02 7,-1.7 7,-1.69 7,-1.7 7,-1.69 7,-1.7 7,-1.69 7,-1.7 7,-1.69 7,-1.7 7,-1.69"
+               id="path182"
+               style="stroke:#e64202;stroke-opacity:1" />
+          </g>
+          <g
+             stroke="#289abe"
+             id="g183">
+            <path
+               fill="none"
+               d="m 275.5,52.07 7,-0.52 7,-0.51 7,-0.52 7,-0.51 7,-0.52 7,-0.51 7,-0.51 7,-0.52 7,-0.51 7,-0.52"
+               id="path183"
+               style="stroke:#02b1f2;stroke-opacity:1" />
+          </g>
+          <g
+             fill="#d44958"
+             font-size="9px"
+             id="g184">
+            <text
+               stroke="none"
+               x="359.5"
+               y="24.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text183"
+               style="fill:#e64202;fill-opacity:1">240</text>
+          </g>
+          <g
+             fill="#289abe"
+             font-size="9px"
+             id="g185">
+            <text
+               stroke="none"
+               x="359.5"
+               y="46.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text184"
+               style="fill:#02b1f2;fill-opacity:1">280</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g130"
+       transform="translate(98.194665,0.16284356)">
+      <g
+         id="g129">
+        <clipPath
+           id="clip15">
+          <path
+             d="m 177.5,6.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path123" />
+        </clipPath>
+        <g
+           clip-path="url(#clip15)"
+           id="g128">
+          <g
+             stroke="#d44958"
+             id="g124">
+            <path
+               fill="none"
+               d="m 177.5,23.56 7,1.8 7,1.79 7,1.8 7,1.8 7,1.79 7,1.8 7,1.8 7,1.79 7,1.8 7,1.8"
+               id="path124"
+               style="stroke:#e64202;stroke-opacity:1" />
+          </g>
+          <g
+             stroke="#289abe"
+             id="g125">
+            <path
+               fill="none"
+               d="m 177.5,51.63 7,-0.43 7,-0.43 7,-0.42 7,-0.43 7,-0.43 7,-0.42 7,-0.43 7,-0.42 7,-0.43 7,-0.43"
+               id="path125"
+               style="stroke:#02b1f2;stroke-opacity:1" />
+          </g>
+          <g
+             fill="#d44958"
+             font-size="9px"
+             id="g126">
+            <text
+               stroke="none"
+               x="261.5"
+               y="41.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text125"
+               style="fill:#e64202;fill-opacity:1">240</text>
+          </g>
+          <g
+             fill="#289abe"
+             font-size="9px"
+             id="g127">
+            <text
+               stroke="none"
+               x="261.5"
+               y="55.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text126"
+               style="fill:#02b1f2;fill-opacity:1">280</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g78"
+       transform="translate(0,84.190119)">
+      <g
+         id="g77">
+        <clipPath
+           id="clip10">
+          <path
+             d="m 79.5,90.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path71" />
+        </clipPath>
+        <g
+           clip-path="url(#clip10)"
+           id="g76">
+          <g
+             stroke="#d44958"
+             id="g72">
+            <path
+               fill="none"
+               d="m 79.5,107.56 7,2.81 7,2.8 7,2.81 7,2.81 7,2.8 7,2.81 7,2.81 7,2.8 7,2.81 7,2.81"
+               id="path72"
+               style="stroke:#e64202;stroke-opacity:1" />
+          </g>
+          <g
+             stroke="#289abe"
+             id="g73">
+            <path
+               fill="none"
+               d="m 79.5,125.53 7,0.58 7,0.58 7,0.59 7,0.58 7,0.59 7,0.58 7,0.58 7,0.59 7,0.58 7,0.58"
+               id="path73"
+               style="stroke:#02b1f2;stroke-opacity:1" />
+          </g>
+          <g
+             fill="#d44958"
+             font-size="9px"
+             id="g74">
+            <text
+               stroke="none"
+               x="163.5"
+               y="145.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text73"
+               style="fill:#e64202;fill-opacity:1">0.2</text>
+          </g>
+          <g
+             fill="#289abe"
+             font-size="9px"
+             id="g75">
+            <text
+               stroke="none"
+               x="163.5"
+               y="131.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text74"
+               style="fill:#02b1f2;fill-opacity:1">0.3</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       id="g87"
+       transform="translate(0.16284356,84.190119)">
+      <g
+         id="g86">
+        <clipPath
+           id="clip11">
+          <path
+             d="m 79.5,174.5 v 72 h 84 v -72 z"
+             clip-rule="evenodd"
+             id="path80" />
+        </clipPath>
+        <g
+           clip-path="url(#clip11)"
+           id="g85">
+          <g
+             stroke="#d44958"
+             id="g81">
+            <path
+               fill="none"
+               d="m 79.5,209.02 7,1.1 7,1.11 7,1.1 7,1.11 7,1.1 7,1.11 7,1.1 7,1.11 7,1.1 7,1.11"
+               id="path81"
+               style="stroke:#e64202;stroke-opacity:1" />
+          </g>
+          <g
+             stroke="#289abe"
+             id="g82">
+            <path
+               fill="none"
+               d="m 79.5,192.07 7,2.29 7,2.28 7,2.29 7,2.28 7,2.29 7,2.28 7,2.29 7,2.28 7,2.29 7,2.28"
+               id="path82"
+               style="stroke:#02b1f2;stroke-opacity:1" />
+          </g>
+          <g
+             fill="#d44958"
+             font-size="9px"
+             id="g83">
+            <text
+               stroke="none"
+               x="163.5"
+               y="228.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text82"
+               style="fill:#e64202;fill-opacity:1">1.5</text>
+          </g>
+          <g
+             fill="#289abe"
+             font-size="9px"
+             id="g84">
+            <text
+               stroke="none"
+               x="163.5"
+               y="214.5"
+               dy="-2.3399999"
+               text-anchor="end"
+               id="text83"
+               style="fill:#02b1f2;fill-opacity:1">2</text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

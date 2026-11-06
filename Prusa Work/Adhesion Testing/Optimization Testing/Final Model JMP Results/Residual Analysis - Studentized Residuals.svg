@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="460" height="163" viewBox="0 -3 460 163">
+ <g stroke="#000000" fill="#000000" font-family="Segoe UI" font-size="12">
+  <g>
+   <clipPath id="clip1">
+    <path d="M0.5,-9.5 L0.5,131.5 L44.5,131.5 L44.5,-9.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip1)">
+    <g stroke="#A5A5A5">
+     <path fill="none" d="M37.5,118.5 L43.5,118.5"/>
+     <path fill="none" d="M37.5,104.5 L43.5,104.5"/>
+     <path fill="none" d="M37.5,89.5 L43.5,89.5"/>
+     <path fill="none" d="M37.5,75.5 L43.5,75.5"/>
+     <path fill="none" d="M37.5,60.5 L43.5,60.5"/>
+     <path fill="none" d="M37.5,45.5 L43.5,45.5"/>
+     <path fill="none" d="M37.5,31.5 L43.5,31.5"/>
+     <path fill="none" d="M37.5,16.5 L43.5,16.5"/>
+     <path fill="none" d="M37.5,2.5 L43.5,2.5"/>
+    </g>
+    <text stroke="none" x="35.5" y="118.5" dy="4.97" text-anchor="end">-4</text>
+    <text stroke="none" x="35.5" y="89.5" dy="4.97" text-anchor="end">-2</text>
+    <text stroke="none" x="35.5" y="60.5" dy="4.97" text-anchor="end">0</text>
+    <text stroke="none" x="35.5" y="31.5" dy="4.97" text-anchor="end">2</text>
+    <text stroke="none" x="35.5" y="2.5" dy="4.97" text-anchor="end">4</text>
+   </g>
+  </g>
+  <g>
+   <clipPath id="clip2">
+    <path d="M0.5,-9.5 L0.5,131.5 L44.5,131.5 L44.5,-9.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip2)">
+    <g fill="#FFFFFF">
+     <g transform="translate(8.5,60.5)">
+      <g transform="rotate(-90)">
+       <text stroke="none" dy="4.97" text-anchor="middle">Studentized Residual</text>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g fill="#FFFFFF">
+   <rect stroke="none" x="43.5" y="0.5" width="416" height="120"/>
+  </g>
+  <g>
+   <g>
+    <clipPath id="clip3">
+     <path d="M43.5,0.5 L43.5,120.5 L459.5,120.5 L459.5,0.5 z" clip-rule="evenodd"/>
+    </clipPath>
+    <g clip-path="url(#clip3)">
+     <g>
+      <g stroke="#2867FD">
+       <path fill="none" d="M43.5,60.5 L459.5,60.5"/>
+      </g>
+     </g>
+     <g>
+      <g stroke="#F03246">
+       <path fill="none" d="M43.5,7.59 L459.5,7.59"/>
+      </g>
+     </g>
+     <g>
+      <g stroke="#F03246">
+       <path fill="none" d="M43.5,113.41 L459.5,113.41"/>
+      </g>
+     </g>
+     <g>
+      <g stroke="#21BC2D">
+       <path fill="none" d="M43.5,31.57 L459.5,31.57"/>
+      </g>
+     </g>
+     <g>
+      <g stroke="#21BC2D">
+       <path fill="none" d="M43.5,89.43 L459.5,89.43"/>
+      </g>
+     </g>
+     <g>
+      <g stroke-width="1.12" fill="#AB08FC">
+       <ellipse stroke="none" cx="47.54" cy="35.55" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="51.58" cy="64.07" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="55.62" cy="45.26" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="59.66" cy="67.02" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="63.69" cy="76.28" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="67.73" cy="40.65" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="71.77" cy="85.45" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="75.81" cy="31.72" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="79.85" cy="43.95" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="83.89" cy="33.23" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="87.93" cy="59.24" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="91.97" cy="56.41" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="96" cy="74.26" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="100.04" cy="50.09" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="104.08" cy="52.98" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="108.12" cy="31.21" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="112.16" cy="62.51" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="116.2" cy="66.52" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12">
+       <ellipse stroke="none" cx="120.24" cy="85.5" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12" fill="#DAD109">
+       <ellipse stroke="none" cx="124.28" cy="93.33" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12">
+       <ellipse stroke="none" cx="128.32" cy="69.96" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="132.35" cy="65.59" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="136.39" cy="82.81" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="140.43" cy="50.85" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="144.47" cy="60.49" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="148.51" cy="66.08" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="152.55" cy="77.54" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="156.59" cy="57.04" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="160.63" cy="71.23" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="164.67" cy="80.72" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="168.7" cy="57.33" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="172.74" cy="69.43" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="176.78" cy="50.43" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="180.82" cy="61.41" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12" fill="#DAD109">
+       <ellipse stroke="none" cx="184.86" cy="30.16" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12">
+       <ellipse stroke="none" cx="188.9" cy="56.97" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="192.94" cy="39.13" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="196.98" cy="71.04" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="201.01" cy="81.65" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="205.05" cy="75.01" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="209.09" cy="42.87" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="213.13" cy="60.86" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="217.17" cy="52.64" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12" fill="#DAD109">
+       <ellipse stroke="none" cx="221.21" cy="23.38" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12">
+       <ellipse stroke="none" cx="225.25" cy="35.54" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="229.29" cy="71.03" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="233.33" cy="58.34" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="237.36" cy="55.48" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="241.4" cy="72.59" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="245.44" cy="56.61" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="249.48" cy="54.81" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="253.52" cy="72.1" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="257.56" cy="53.15" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="261.6" cy="72.33" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="265.64" cy="60.22" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="269.67" cy="67.33" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="273.71" cy="52.39" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="277.75" cy="70.25" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="281.79" cy="72.34" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="285.83" cy="54.39" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="289.87" cy="53.82" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="293.91" cy="79.81" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="297.95" cy="66.02" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="301.99" cy="67.68" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="306.02" cy="60.18" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="310.06" cy="74.88" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="314.1" cy="60.24" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="318.14" cy="63.4" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="322.18" cy="69.08" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="326.22" cy="70.25" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="330.26" cy="59.99" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="334.3" cy="55.73" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="338.33" cy="49.06" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="342.37" cy="61.16" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12" fill="#DAD109">
+       <ellipse stroke="none" cx="346.41" cy="91.63" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12">
+       <ellipse stroke="none" cx="350.45" cy="72.84" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="354.49" cy="54.83" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="358.53" cy="59.95" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="362.57" cy="75.96" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="366.61" cy="60.9" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="370.65" cy="43.73" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="374.68" cy="61.6" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="378.72" cy="53.8" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="382.76" cy="53.56" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12" fill="#DAD109">
+       <ellipse stroke="none" cx="386.8" cy="24.58" rx="2.64" ry="2.64"/>
+      </g>
+      <g stroke-width="1.12">
+       <ellipse stroke="none" cx="390.84" cy="68.71" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="394.88" cy="82.18" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="398.92" cy="47.33" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="402.96" cy="54.37" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="407" cy="72.04" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="411.03" cy="49.17" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="415.07" cy="60.84" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="419.11" cy="49.27" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="423.15" cy="56.15" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="427.19" cy="48.04" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="431.23" cy="58.94" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="435.27" cy="89.48" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="439.31" cy="44.82" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="443.34" cy="58.66" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="447.38" cy="54.08" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="451.42" cy="85.77" rx="2.64" ry="2.64"/>
+       <ellipse stroke="none" cx="455.46" cy="55.36" rx="2.64" ry="2.64"/>
+      </g>
+     </g>
+     <g/>
+    </g>
+   </g>
+  </g>
+  <g stroke-linecap="square" stroke="#A5A5A5">
+   <path fill="none" d="M43.5,120.5 L43.5,0.5 L459.5,0.5 L459.5,120.5 L43.5,120.5"/>
+  </g>
+  <g>
+   <clipPath id="clip4">
+    <path d="M33.5,120.5 L33.5,161.5 L470.5,161.5 L470.5,120.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip4)">
+    <g stroke="#A5A5A5">
+     <path fill="none" d="M83.5,120.5 L83.5,123.5"/>
+     <path fill="none" d="M164.5,120.5 L164.5,123.5"/>
+     <path fill="none" d="M245.5,120.5 L245.5,123.5"/>
+     <path fill="none" d="M326.5,120.5 L326.5,123.5"/>
+     <path fill="none" d="M406.5,120.5 L406.5,123.5"/>
+     <path fill="none" d="M43.5,120.5 L43.5,126.5"/>
+     <path fill="none" d="M124.5,120.5 L124.5,126.5"/>
+     <path fill="none" d="M205.5,120.5 L205.5,126.5"/>
+     <path fill="none" d="M285.5,120.5 L285.5,126.5"/>
+     <path fill="none" d="M366.5,120.5 L366.5,126.5"/>
+     <path fill="none" d="M447.5,120.5 L447.5,126.5"/>
+    </g>
+    <text stroke="none" x="43.5" y="128.5" dy="12.95" text-anchor="middle">0</text>
+    <text stroke="none" x="124.5" y="128.5" dy="12.95" text-anchor="middle">20</text>
+    <text stroke="none" x="205.5" y="128.5" dy="12.95" text-anchor="middle">40</text>
+    <text stroke="none" x="285.5" y="128.5" dy="12.95" text-anchor="middle">60</text>
+    <text stroke="none" x="366.5" y="128.5" dy="12.95" text-anchor="middle">80</text>
+    <text stroke="none" x="447.5" y="128.5" dy="12.95" text-anchor="middle">100</text>
+   </g>
+  </g>
+  <g>
+   <clipPath id="clip5">
+    <path d="M33.5,120.5 L33.5,161.5 L470.5,161.5 L470.5,120.5 z" clip-rule="evenodd"/>
+   </clipPath>
+   <g clip-path="url(#clip5)">
+    <g fill="#FFFFFF">
+     <text stroke="none" x="250.5" y="152.5" dy="4.97" text-anchor="middle">Row Number</text>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

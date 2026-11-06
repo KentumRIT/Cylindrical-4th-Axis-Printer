@@ -66,7 +66,7 @@ Slower speed printing especially for the first few layers
 ### Useful Results
 - The perpendicular tensile test proved to be overall better for testing. Whilst the results were similar across all three tests, the perpendicular tensile test was less prone to repurting the fabric at higher loads
 
-[Improving adhesion of three-dimensional printed objects on textile fabrics by polymer coating](https://journals.sagepub.com/doi/pdf/10.1177/1558925019895257)
+## [Improving adhesion of three-dimensional printed objects on textile fabrics by polymer coating](https://journals.sagepub.com/doi/pdf/10.1177/1558925019895257)
 ### Input Parameters Investigated
 - Existence of a PMMA Coating
 - Material of fabric-linen, cotten, and 0.17mm polyester
@@ -80,7 +80,7 @@ Slower speed printing especially for the first few layers
 ### Useful Results
 - Specifically on PLA did show to have some level of improvement of adhesion strength
 
-[The influence of thermal after-treatment on the adhesion of 3D prints on textile fabrics](file:///C:/Users/tcarr/Downloads/_2020_Grmer_CDATP1_104-110.pdf)
+## [The influence of thermal after-treatment on the adhesion of 3D prints on textile fabrics](https://www.researchgate.net/publication/346085124_The_influence_of_thermal_after-treatment_on_the_adhesion_of_3D_prints_on_textile_fabrics)
 ### Input Parameters Investigated
 - Type of printer filament
 - Thermal aftertreatment in the form of multiple ironings
@@ -98,3 +98,11 @@ Slower speed printing especially for the first few layers
 - There was a small increase in adhesion with increased Z distance that significantly dropped after ~0.5mm. In fact, a small Z distance change from 0.45mm to 0.35 mm tripled the adhesion
 - CPE outpreformed every other filament on both the ironing and non-ironing tests
 - The ironing had somewhat significant improvements on adhesion, consistently providing an extra amuont of adhesion by a factor of ~1.5 on average
+
+## [Effect of 3D printing on textile fabric](https://www.researchgate.net/publication/321228371_Effect_of_3D_printing_on_textile_fabric)
+
+### Input Parameters Investigated
+- Printing speed
+- Nozzle temperature
+- Flow
+- Bed Temp

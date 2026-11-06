@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="482"
+   height="164"
+   viewBox="0 -4 482 164"
+   version="1.1"
+   id="svg147"
+   sodipodi:docname="Residual Analysis - Residual by Predicted.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:export-filename="Residual Analysis - Residual by Predicted.png"
+   inkscape:export-xdpi="239.00415"
+   inkscape:export-ydpi="239.00415"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs147" />
+  <sodipodi:namedview
+     id="namedview147"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3188568"
+     inkscape:cx="344.99575"
+     inkscape:cy="94.399935"
+     inkscape:window-width="2100"
+     inkscape:window-height="1225"
+     inkscape:window-x="4792"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g130" />
+  <g
+     stroke="#000000"
+     fill="#000000"
+     font-family="Segoe UI"
+     font-size="12"
+     id="g147">
+    <g
+       id="g15">
+      <clipPath
+         id="clip1">
+        <path
+           d="M0.5,-9.5 L0.5,131.5 L66.5,131.5 L66.5,-9.5 z"
+           clip-rule="evenodd"
+           id="path1" />
+      </clipPath>
+      <g
+         clip-path="url(#clip1)"
+         id="g14">
+        <g
+           stroke="#A5A5A5"
+           id="g8">
+          <path
+             fill="none"
+             d="M59.5,120.5 L65.5,120.5"
+             id="path2" />
+          <path
+             fill="none"
+             d="M59.5,100.5 L65.5,100.5"
+             id="path3" />
+          <path
+             fill="none"
+             d="M59.5,80.5 L65.5,80.5"
+             id="path4" />
+          <path
+             fill="none"
+             d="M59.5,61.5 L65.5,61.5"
+             id="path5" />
+          <path
+             fill="none"
+             d="M59.5,41.5 L65.5,41.5"
+             id="path6" />
+          <path
+             fill="none"
+             d="M59.5,21.5 L65.5,21.5"
+             id="path7" />
+          <path
+             fill="none"
+             d="M59.5,1.5 L65.5,1.5"
+             id="path8" />
+        </g>
+        <text
+           stroke="none"
+           x="57.5"
+           y="120.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text8">-30</text>
+        <text
+           stroke="none"
+           x="57.5"
+           y="100.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text9">-20</text>
+        <text
+           stroke="none"
+           x="57.5"
+           y="80.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text10">-10</text>
+        <text
+           stroke="none"
+           x="57.5"
+           y="61.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text11">0</text>
+        <text
+           stroke="none"
+           x="57.5"
+           y="41.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text12">10</text>
+        <text
+           stroke="none"
+           x="57.5"
+           y="21.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text13">20</text>
+        <text
+           stroke="none"
+           x="57.5"
+           y="1.5"
+           dy="4.97"
+           text-anchor="end"
+           id="text14">30</text>
+      </g>
+    </g>
+    <g
+       id="g22">
+      <clipPath
+         id="clip2">
+        <path
+           d="M0.5,-9.5 L0.5,131.5 L66.5,131.5 L66.5,-9.5 z"
+           clip-rule="evenodd"
+           id="path15" />
+      </clipPath>
+      <g
+         clip-path="url(#clip2)"
+         id="g21">
+        <g
+           fill="#FFFFFF"
+           id="g20">
+          <g
+             transform="translate(8.5,59.5)"
+             id="g17">
+            <g
+               transform="rotate(-90)"
+               id="g16">
+              <text
+                 stroke="none"
+                 dy="4.97"
+                 text-anchor="middle"
+                 id="text15">Adhesion Strength </text>
+            </g>
+          </g>
+          <g
+             transform="translate(24.5,59.5)"
+             id="g19">
+            <g
+               transform="rotate(-90)"
+               id="g18">
+              <text
+                 stroke="none"
+                 dy="4.97"
+                 text-anchor="middle"
+                 id="text17">Residual</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g
+       fill="#FFFFFF"
+       id="g23">
+      <rect
+         stroke="none"
+         x="65.5"
+         y="0.5"
+         width="416"
+         height="120"
+         id="rect22" />
+    </g>
+    <g
+       id="g130">
+      <g
+         id="g129">
+        <clipPath
+           id="clip3">
+          <path
+             d="M65.5,0.5 L65.5,120.5 L481.5,120.5 L481.5,0.5 z"
+             clip-rule="evenodd"
+             id="path23" />
+        </clipPath>
+        <g
+           clip-path="url(#clip3)"
+           id="g128">
+          <g
+             id="g25">
+            <g
+               stroke-width="2"
+               stroke-opacity="0.75"
+               stroke="#2867FD"
+               fill-opacity="0.75"
+               id="g24">
+              <path
+                 fill="none"
+                 d="M65.5,61.05 L481.5,61.05"
+                 id="path24"
+                 style="stroke:#02b1f2;stroke-opacity:1" />
+            </g>
+          </g>
+          <g
+             id="g126">
+            <g
+               stroke-width="1.12"
+               id="g29">
+              <ellipse
+                 stroke="none"
+                 cx="101.47"
+                 cy="46.01"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse25" />
+              <ellipse
+                 stroke="none"
+                 cx="107.9"
+                 cy="51.43"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse26" />
+              <ellipse
+                 stroke="none"
+                 cx="111.32"
+                 cy="70.82"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse27" />
+              <ellipse
+                 stroke="none"
+                 cx="111.32"
+                 cy="69.03"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse28" />
+              <ellipse
+                 stroke="none"
+                 cx="122.92"
+                 cy="54.05"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse29" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#DAD109"
+               id="g30">
+              <ellipse
+                 stroke="none"
+                 cx="129.8"
+                 cy="20.63"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse30"
+                 style="fill:#ffcb31;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               id="g71">
+              <ellipse
+                 stroke="none"
+                 cx="134.12"
+                 cy="50.92"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse31" />
+              <ellipse
+                 stroke="none"
+                 cx="134.9"
+                 cy="52.71"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse32" />
+              <ellipse
+                 stroke="none"
+                 cx="137.55"
+                 cy="61.53"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse33" />
+              <ellipse
+                 stroke="none"
+                 cx="142.83"
+                 cy="56.16"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse34" />
+              <ellipse
+                 stroke="none"
+                 cx="148.95"
+                 cy="95.69"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse35" />
+              <ellipse
+                 stroke="none"
+                 cx="149.78"
+                 cy="52.06"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse36" />
+              <ellipse
+                 stroke="none"
+                 cx="149.78"
+                 cy="33.34"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse37" />
+              <ellipse
+                 stroke="none"
+                 cx="153.13"
+                 cy="77.46"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse38" />
+              <ellipse
+                 stroke="none"
+                 cx="158.95"
+                 cy="51.52"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse39" />
+              <ellipse
+                 stroke="none"
+                 cx="158.95"
+                 cy="41.75"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse40" />
+              <ellipse
+                 stroke="none"
+                 cx="164.28"
+                 cy="61.63"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse41" />
+              <ellipse
+                 stroke="none"
+                 cx="166.6"
+                 cy="54.64"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse42" />
+              <ellipse
+                 stroke="none"
+                 cx="167.16"
+                 cy="65.09"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse43" />
+              <ellipse
+                 stroke="none"
+                 cx="167.53"
+                 cy="58.57"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse44" />
+              <ellipse
+                 stroke="none"
+                 cx="175.23"
+                 cy="68.58"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse45" />
+              <ellipse
+                 stroke="none"
+                 cx="178.06"
+                 cy="57.98"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse46" />
+              <ellipse
+                 stroke="none"
+                 cx="178.25"
+                 cy="60.55"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse47" />
+              <ellipse
+                 stroke="none"
+                 cx="178.75"
+                 cy="68.85"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse48" />
+              <ellipse
+                 stroke="none"
+                 cx="179.19"
+                 cy="60.36"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse49" />
+              <ellipse
+                 stroke="none"
+                 cx="179.73"
+                 cy="48.62"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse50" />
+              <ellipse
+                 stroke="none"
+                 cx="179.98"
+                 cy="73.44"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse51" />
+              <ellipse
+                 stroke="none"
+                 cx="181.5"
+                 cy="73.44"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse52" />
+              <ellipse
+                 stroke="none"
+                 cx="182.48"
+                 cy="60.65"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse53" />
+              <ellipse
+                 stroke="none"
+                 cx="183.74"
+                 cy="77.11"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse54" />
+              <ellipse
+                 stroke="none"
+                 cx="189.81"
+                 cy="82.96"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse55" />
+              <ellipse
+                 stroke="none"
+                 cx="189.81"
+                 cy="60.21"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse56" />
+              <ellipse
+                 stroke="none"
+                 cx="191.36"
+                 cy="58.69"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse57" />
+              <ellipse
+                 stroke="none"
+                 cx="194.05"
+                 cy="76.24"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse58" />
+              <ellipse
+                 stroke="none"
+                 cx="198.23"
+                 cy="73.55"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse59" />
+              <ellipse
+                 stroke="none"
+                 cx="203.58"
+                 cy="60.68"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse60" />
+              <ellipse
+                 stroke="none"
+                 cx="203.72"
+                 cy="81.89"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse61" />
+              <ellipse
+                 stroke="none"
+                 cx="204.61"
+                 cy="47.28"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse62" />
+              <ellipse
+                 stroke="none"
+                 cx="204.81"
+                 cy="62.61"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse63" />
+              <ellipse
+                 stroke="none"
+                 cx="211.52"
+                 cy="77.18"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse64" />
+              <ellipse
+                 stroke="none"
+                 cx="212.49"
+                 cy="71.32"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse65" />
+              <ellipse
+                 stroke="none"
+                 cx="217.41"
+                 cy="51.43"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse66" />
+              <ellipse
+                 stroke="none"
+                 cx="217.91"
+                 cy="82.91"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse67" />
+              <ellipse
+                 stroke="none"
+                 cx="218.04"
+                 cy="94.41"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse68" />
+              <ellipse
+                 stroke="none"
+                 cx="218.04"
+                 cy="51.97"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse69" />
+              <ellipse
+                 stroke="none"
+                 cx="224.28"
+                 cy="81.11"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse70" />
+              <ellipse
+                 stroke="none"
+                 cx="224.28"
+                 cy="61.04"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse71" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#AB08FC"
+               id="g74">
+              <ellipse
+                 stroke="none"
+                 cx="225.37"
+                 cy="87.34"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse72"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="225.37"
+                 cy="64.43"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse73"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="225.37"
+                 cy="58.94"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse74"
+                 style="fill:#ff44ce;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               id="g82">
+              <ellipse
+                 stroke="none"
+                 cx="230.12"
+                 cy="55.99"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse75" />
+              <ellipse
+                 stroke="none"
+                 cx="231.11"
+                 cy="55.36"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse76" />
+              <ellipse
+                 stroke="none"
+                 cx="233.27"
+                 cy="75.8"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse77" />
+              <ellipse
+                 stroke="none"
+                 cx="239.79"
+                 cy="62.4"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse78" />
+              <ellipse
+                 stroke="none"
+                 cx="239.79"
+                 cy="54.62"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse79" />
+              <ellipse
+                 stroke="none"
+                 cx="240.52"
+                 cy="95.33"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse80" />
+              <ellipse
+                 stroke="none"
+                 cx="241.26"
+                 cy="94.07"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse81" />
+              <ellipse
+                 stroke="none"
+                 cx="250.02"
+                 cy="33.63"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse82" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#AB08FC"
+               id="g85">
+              <ellipse
+                 stroke="none"
+                 cx="253.75"
+                 cy="71.15"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse83"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="253.75"
+                 cy="54.19"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse84"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="253.75"
+                 cy="28.12"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse85"
+                 style="fill:#ff44ce;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#DAD109"
+               id="g86">
+              <ellipse
+                 stroke="none"
+                 cx="261.35"
+                 cy="4.79"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse86"
+                 style="fill:#ffcb31;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#AB08FC"
+               id="g89">
+              <ellipse
+                 stroke="none"
+                 cx="277.24"
+                 cy="102.13"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse87"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="277.24"
+                 cy="84.02"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse88"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="277.24"
+                 cy="19.97"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse89"
+                 style="fill:#ff44ce;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               id="g93">
+              <ellipse
+                 stroke="none"
+                 cx="277.58"
+                 cy="98.66"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse90" />
+              <ellipse
+                 stroke="none"
+                 cx="278.34"
+                 cy="78.9"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse91" />
+              <ellipse
+                 stroke="none"
+                 cx="278.49"
+                 cy="36.38"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse92" />
+              <ellipse
+                 stroke="none"
+                 cx="278.91"
+                 cy="95.4"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse93" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#DAD109"
+               id="g94">
+              <ellipse
+                 stroke="none"
+                 cx="278.91"
+                 cy="12.65"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse94"
+                 style="fill:#ffcb31;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               id="g95">
+              <ellipse
+                 stroke="none"
+                 cx="281.21"
+                 cy="79.77"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse95" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#AB08FC"
+               id="g104">
+              <ellipse
+                 stroke="none"
+                 cx="282.74"
+                 cy="48.45"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse96"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="282.74"
+                 cy="35.66"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse97"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="282.74"
+                 cy="33.52"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse98"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="283.4"
+                 cy="67.04"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse99"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="283.4"
+                 cy="43.64"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse100"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="283.4"
+                 cy="13.96"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse101"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="293.2"
+                 cy="71.99"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse102"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="293.2"
+                 cy="16.29"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse103"
+                 style="fill:#ff44ce;fill-opacity:1" />
+              <ellipse
+                 stroke="none"
+                 cx="293.2"
+                 cy="13.15"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse104"
+                 style="fill:#ff44ce;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#DAD109"
+               id="g105">
+              <ellipse
+                 stroke="none"
+                 cx="294.03"
+                 cy="109.35"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse105"
+                 style="fill:#ffcb31;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               id="g121">
+              <ellipse
+                 stroke="none"
+                 cx="294.03"
+                 cy="76.13"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse106" />
+              <ellipse
+                 stroke="none"
+                 cx="299.8"
+                 cy="49.55"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse107" />
+              <ellipse
+                 stroke="none"
+                 cx="299.8"
+                 cy="26.25"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse108" />
+              <ellipse
+                 stroke="none"
+                 cx="308.08"
+                 cy="46.38"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse109" />
+              <ellipse
+                 stroke="none"
+                 cx="315.73"
+                 cy="78.58"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse110" />
+              <ellipse
+                 stroke="none"
+                 cx="328.89"
+                 cy="53.85"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse111" />
+              <ellipse
+                 stroke="none"
+                 cx="329.19"
+                 cy="91.43"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse112" />
+              <ellipse
+                 stroke="none"
+                 cx="329.19"
+                 cy="62.11"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse113" />
+              <ellipse
+                 stroke="none"
+                 cx="332.42"
+                 cy="36.92"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse114" />
+              <ellipse
+                 stroke="none"
+                 cx="340.87"
+                 cy="51.98"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse115" />
+              <ellipse
+                 stroke="none"
+                 cx="343.83"
+                 cy="55.81"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse116" />
+              <ellipse
+                 stroke="none"
+                 cx="346.41"
+                 cy="76.6"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse117" />
+              <ellipse
+                 stroke="none"
+                 cx="346.41"
+                 cy="50.79"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse118" />
+              <ellipse
+                 stroke="none"
+                 cx="354.42"
+                 cy="86.49"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse119" />
+              <ellipse
+                 stroke="none"
+                 cx="363.6"
+                 cy="92.67"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse120" />
+              <ellipse
+                 stroke="none"
+                 cx="369.25"
+                 cy="45.92"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse121" />
+            </g>
+            <g
+               stroke-width="1.12"
+               fill="#DAD109"
+               id="g122">
+              <ellipse
+                 stroke="none"
+                 cx="369.46"
+                 cy="111.91"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse122"
+                 style="fill:#ffcb31;fill-opacity:1" />
+            </g>
+            <g
+               stroke-width="1.12"
+               id="g125">
+              <ellipse
+                 stroke="none"
+                 cx="387.1"
+                 cy="43.11"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse123" />
+              <ellipse
+                 stroke="none"
+                 cx="411.01"
+                 cy="61.6"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse124" />
+              <ellipse
+                 stroke="none"
+                 cx="430.91"
+                 cy="42.91"
+                 rx="2.64"
+                 ry="2.64"
+                 id="ellipse125" />
+            </g>
+          </g>
+          <g
+             id="g127" />
+        </g>
+      </g>
+    </g>
+    <g
+       stroke-linecap="square"
+       stroke="#A5A5A5"
+       id="g131">
+      <path
+         fill="none"
+         d="M65.5,120.5 L65.5,0.5 L481.5,0.5 L481.5,120.5 L65.5,120.5"
+         id="path130" />
+    </g>
+    <g
+       id="g143">
+      <clipPath
+         id="clip4">
+        <path
+           d="M55.5,120.5 L55.5,161.5 L492.5,161.5 L492.5,120.5 z"
+           clip-rule="evenodd"
+           id="path131" />
+      </clipPath>
+      <g
+         clip-path="url(#clip4)"
+         id="g142">
+        <g
+           stroke="#A5A5A5"
+           id="g137">
+          <path
+             fill="none"
+             d="M65.5,120.5 L65.5,126.5"
+             id="path132" />
+          <path
+             fill="none"
+             d="M142.5,120.5 L142.5,126.5"
+             id="path133" />
+          <path
+             fill="none"
+             d="M219.5,120.5 L219.5,126.5"
+             id="path134" />
+          <path
+             fill="none"
+             d="M296.5,120.5 L296.5,126.5"
+             id="path135" />
+          <path
+             fill="none"
+             d="M373.5,120.5 L373.5,126.5"
+             id="path136" />
+          <path
+             fill="none"
+             d="M450.5,120.5 L450.5,126.5"
+             id="path137" />
+        </g>
+        <text
+           stroke="none"
+           x="65.5"
+           y="128.5"
+           dy="12.95"
+           text-anchor="middle"
+           id="text137">20</text>
+        <text
+           stroke="none"
+           x="142.5"
+           y="128.5"
+           dy="12.95"
+           text-anchor="middle"
+           id="text138">40</text>
+        <text
+           stroke="none"
+           x="219.5"
+           y="128.5"
+           dy="12.95"
+           text-anchor="middle"
+           id="text139">60</text>
+        <text
+           stroke="none"
+           x="296.5"
+           y="128.5"
+           dy="12.95"
+           text-anchor="middle"
+           id="text140">80</text>
+        <text
+           stroke="none"
+           x="373.5"
+           y="128.5"
+           dy="12.95"
+           text-anchor="middle"
+           id="text141">100</text>
+        <text
+           stroke="none"
+           x="450.5"
+           y="128.5"
+           dy="12.95"
+           text-anchor="middle"
+           id="text142">120</text>
+      </g>
+    </g>
+    <g
+       id="g146">
+      <clipPath
+         id="clip5">
+        <path
+           d="M55.5,120.5 L55.5,161.5 L492.5,161.5 L492.5,120.5 z"
+           clip-rule="evenodd"
+           id="path143" />
+      </clipPath>
+      <g
+         clip-path="url(#clip5)"
+         id="g145">
+        <g
+           fill="#FFFFFF"
+           id="g144">
+          <text
+             stroke="none"
+             x="272.5"
+             y="152.5"
+             dy="4.97"
+             text-anchor="middle"
+             id="text143">Adhesion Strength Predicted (lbs)</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

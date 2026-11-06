@@ -8,15 +8,15 @@ from PrusaGcodeEditing import GcodeEditor
 
 # Print parameters
 standard_printing_temp = 220                                # deg C
-first_layer_temps = [240, 240, 240, 240, 240, 240]          # layer temps for each print are first layer temp, midpoint, standard printing temp
+first_layer_temps = [280, 220, 240, 280, 220, 240]          # layer temps for each print are first layer temp, midpoint, standard printing temp
 
-ironing_passes = [0, 0, 0, 0, 0, 0]                         # how many times to repeat 1st layer G-code with no additional extrusion
+ironing_passes = [2, 0, 0, 2, 0, 0]                         # how many times to repeat 1st layer G-code with no additional extrusion
 
-first_layer_speed_mults = [0.45, 0.45, 0.45, 0.45, 0.45, 0.45]  # layer speed multipliers for each print are first layer mult, midpoint, 1.0
+first_layer_speed_mults = [0.20, 1.00, 0.45, 0.20, 1.00, 0.45]  # layer speed multipliers for each print are first layer mult, midpoint, 1.0
 
 z_offsets = [0.2, 0.2, 0.2, 0.2, 0.2, 0.2]               # distance between the mandrel surface and the first layer in the Z direction
 
-extrusion_mults= [2, 2, 2, 2, 2, 2]                   # multiplier for positive extrusion moves in the first layer
+extrusion_mults= [1.5, 1, 2, 1.5, 1, 2]                   # multiplier for positive extrusion moves in the first layer
 
 
 
