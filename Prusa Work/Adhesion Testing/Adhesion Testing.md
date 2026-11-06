@@ -284,4 +284,16 @@ Same as [variance testing](#printed-geometry-1)
 ### Experimental Notes
 Same as [adhesion strength optimization](#experimental-notes-2)
 
-## Lowering Temperature Bounds
+## Investigating Mesh Failure
+### Initial Observations & Data Collection
+In the prior [adhesion strength experiment](#adhesion-strength-optimization-study), we noticed that there were two distinct failure modes for our samples: either the plastic would break off the mesh or the mesh itself would tear. Starting with run 8 sample 3, we imaged the mesh on the mandrel after breaking. If the test stopped due to low force before the plastic was fully removed from the mesh, we would manually jog the ADMET until the sample was removed so that the break would be indicative of the testing conditions. We then went back through the images and matched each sample for which we had a picture to its point of failure: plastic or mesh.
+
+### Statistical Analysis
+All of JMP's test for unequal variances (O'Brien[.5], Brown-Forsythe, Levene, Bartlett, and 2-sided F test) showed a significant difference between failure modalities. The mesh breaking showed significantly less variance than the plastic breaking. We used the Welch's test for equal means because our group standard deviations are not equal, which concluded that the plastic failure mode is significantly stronger than the mesh failure mode. The mesh transfers the testing load every test, not just in tests where the mesh failed first. Thus, we expect that the mesh is weaker than typical in tests where the mesh failed first.
+
+We then investigated causes for the mesh weakening. Logistic fit of failure modality against main effects (print temperature, speed, etc.) showed significant impact only from temperature, however the parameter estimate was unstable. This unstable parameter estimate was explained by quasi-complete seperation between print temperature and failure modality, this we ran Fisher's exact test, which also showed significance. Out of 58 samples, all 280 C samples (100%) failed mesh-first and only two 240 C samples (6.7%) failed mesh-first. There is a very strong correlation between print temperature and failure mode, and thus a likely correlation between print temperature and mesh strength.
+
+### Investigation of Print Temperature on Mesh
+We investigated samples printed at 280, 240, and 220 C (two each) and found that the samples printed at 280 C had melted the mesh. This is a plausible causal link between print temperature and mesh strength. This explains why we saw negative impact of print temperature on adhesion strenght and also explains why we saw in our [full model](#results-1) that increasing print temperature reduced the effectiveness of decreased speed, decreased Z offset, increased flow, and increased ironing; at high temperatures all of these processes just further contribute to the melting & weakening of the mesh. It doesn't matter how good our plastic penetration into the mesh is if we weaken the mesh around the edges of the plastic part (right where stress concentration happens during testing). This conclusion is supported by [previous studies](https://www.researchgate.net/publication/321228371_Effect_of_3D_printing_on_textile_fabric), which print below the melting point of the textile they're printing on and find instead that increasing temperature is beneficial.
+
+## Mesh Adhesion at Lower Temperature
