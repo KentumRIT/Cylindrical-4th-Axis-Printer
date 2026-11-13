@@ -1203,11 +1203,12 @@ M862.1 T2 P0.4 A0 F0
 ; turn off unused heaters
 M104 T0 S0	; first tool is only used for probing, so never needs to be heated
 M104 T1 S0
-
 M104 T3 S0
 M104 T4 S0
 
 M217 Z2 ; set toolchange z hop to 2mm, or zhop variable from slicer if higher
+
+M140 S0
 
 ; Home XY
 G28 XY
