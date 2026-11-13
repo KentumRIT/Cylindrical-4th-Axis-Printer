@@ -1,7 +1,7 @@
 # Experimental Aim
 We will investigate how various 3D printing parameters affect the strength of plastic adhesion to the braided mesh substrate in our cylindrical FFF printing setup.
 
-# Experimental Design
+# Experimental Notes
 ## Inititial Factors
 We first made a list of all controllable factors we thought would have an effect on adhesion strength through intuition and literature review. Our initial thoughts are listed below:
 
@@ -289,7 +289,7 @@ Same as [adhesion strength optimization](#experimental-notes-2)
 In the prior [adhesion strength experiment](#adhesion-strength-optimization-study), we noticed that there were two distinct failure modes for our samples: either the plastic would break off the mesh or the mesh itself would tear. Starting with run 8 sample 3, we imaged the mesh on the mandrel after breaking. If the test stopped due to low force before the plastic was fully removed from the mesh, we would manually jog the ADMET until the sample was removed so that the break would be indicative of the testing conditions. We then went back through the images and matched each sample for which we had a picture to its point of failure: plastic or mesh.
 
 ### Statistical Analysis
-All of JMP's test for unequal variances (O'Brien[.5], Brown-Forsythe, Levene, Bartlett, and 2-sided F test) showed a significant difference between failure modalities. The mesh breaking showed significantly less variance than the plastic breaking. We used the Welch's test for equal means because our group standard deviations are not equal, which concluded that the plastic failure mode is significantly stronger than the mesh failure mode. The mesh transfers the testing load every test, not just in tests where the mesh failed first. Thus, we expect that the mesh is weaker than typical in tests where the mesh failed first.
+All of JMP's test for unequal variances (O'Brien[.5], Brown-Forsythe, Levene, Bartlett, and 2-sided F test) showed a significant difference between failure modalities (CHECK THIS BECAUSE THIS IS DONE ACROSS ALL PRINTING PARAMETERS SO THERE'S AN EFFECT THERE TOO). The mesh breaking showed significantly less variance than the plastic breaking. We used the Welch's test for equal means because our group standard deviations are not equal, which concluded that the plastic failure mode is significantly stronger than the mesh failure mode. The mesh transfers the testing load every test, not just in tests where the mesh failed first. Thus, we expect that the mesh is weaker than typical in tests where the mesh failed first.
 
 We then investigated causes for the mesh weakening. Logistic fit of failure modality against main effects (print temperature, speed, etc.) showed significant impact only from temperature, however the parameter estimate was unstable. This unstable parameter estimate was explained by quasi-complete seperation between print temperature and failure modality, this we ran Fisher's exact test, which also showed significance. Out of 58 samples, all 280 C samples (100%) failed mesh-first and only two 240 C samples (6.7%) failed mesh-first. There is a very strong correlation between print temperature and failure mode, and thus a likely correlation between print temperature and mesh strength.
 
@@ -297,3 +297,107 @@ We then investigated causes for the mesh weakening. Logistic fit of failure moda
 We investigated samples printed at 280, 240, and 220 C (two each) and found that the samples printed at 280 C had melted the mesh. This is a plausible causal link between print temperature and mesh strength. This explains why we saw negative impact of print temperature on adhesion strenght and also explains why we saw in our [full model](#results-1) that increasing print temperature reduced the effectiveness of decreased speed, decreased Z offset, increased flow, and increased ironing; at high temperatures all of these processes just further contribute to the melting & weakening of the mesh. It doesn't matter how good our plastic penetration into the mesh is if we weaken the mesh around the edges of the plastic part (right where stress concentration happens during testing). This conclusion is supported by [previous studies](https://www.researchgate.net/publication/321228371_Effect_of_3D_printing_on_textile_fabric), which print below the melting point of the textile they're printing on and find instead that increasing temperature is beneficial.
 
 ## Mesh Adhesion at Lower Temperature
+### Selecting Design Terms
+Knowing now that failure mode is correlated with printing temperature, we re-model the data collected in the higher temperature [adhesion study](#adhesion-strength-optimization-study) to include curvature for print temperature (now a full second order RSM). This shows a different set of significant model terms than our previous results; in the original model (no curvature in temperature response), we see significance in:
+- Temp
+- Flow
+- Temp * Z offset
+- Z offset
+- Mandrel
+- Speed * Speed
+- Temp * Flow
+
+In the full 2nd order RSM, we see significance in:
+- Temp
+- Flow
+- Temp * Z offset
+- Z offset
+- Mandrel
+- Temp * Flow
+- Temp * Temp
+- Speed * Speed
+
+When modeling the full RSM, curvature in temperature seems to take the place of curvature in print speed, which suggests these terms may be confounded. JMP reports a correlation between these two terms of 0.4910 (from the color map on correlations). JMP's alias matrix reports that temp^2 is most highly aliased with ironing^2, flow^2, speed^2, and z offset^2 (all other 2nd order terms), with values of 0.154, 0.155, 0.166, and 0.170 respectively. We expect print temperature to have significant curvature in the domain we investigated, and so we should expect potentially significant bias on each of these terms in the model.
+
+Because we conclude that there may be significant bias between the designed 2nd order terms and the undesigned term (temp^2), we cannot be certain which of the partially-confounded terms will remain significant in further study. Thus, we combine significant terms from models both including and excluding temp^2, yielding:
+- Temp
+- Flow
+- Z offset
+- Mandrel
+- Temp * Z offset
+- Temp * Flow
+- Temp * Temp
+- Speed * Speed
+
+Extending significance to p < 0.10 for both models to be sure 'almost-significant' effects are still considered adds the term:
+- Flow * Flow
+
+Finally, including terms from strong hierarchy yields:
+- Temp
+- Flow
+- Z offset
+- Speed
+- Mandrel
+- Temp * Z offset
+- Temp * Flow
+- Temp * Temp
+- Speed * Speed
+- Flow * Flow
+
+### Hypothesized Mechanics for Selected Terms
+These will be the design terms for modeling in the lower-temperature regime. We exclude ironing, as it did not exhibit significant or large effect (effect estimate magnitude less than 1 lb for both models). While its impact does increase with decreasing temperature, it remains very small at 240 C. Thus, we conclude that it's not worth the time and complexity ironing adds.
+
+The 2FI terms left here are explained by the same plausible mechanism: temperature controls the viscocity of the extrudate and therefore the time-scaling across the other main effects.
+
+Curvature terms are explained by distinct mechanisms. Flow is saturating; as we increase flow we eventually reach a point where the mesh pores are already full of plastic and additional flow doesn't increase strength. Speed seems to have a quadratic relationship over the domain we tested that is robust against changes in other parameters. This is likely caused by a balancing between lower speed allowing more time for plastic to ooze into the pores of the mesh, but also allowing more time for the mesh itself to weaken from nozzle heat. Temperature curvature is likely caused by a similar balancing mechanism to speed curvature. Increasing the temperature both allows the extrudate to better penetrate the mesh and accelerates the weakening of the mesh. In our low temperature testing, we expect to be squarely on the positive effect side of this curve (in the plastic-fracture domain). However, we still want to include temp^2 as a design term because it was highly significan in our previous model.
+
+### Selecting Design Bounds
+**Temperature: 200 C - 240 C**
+Looking at the [high temperature adhesion study](#adhesion-strength-optimization-study), even when we include curvature in temperature, the optimal temperature setpoint is identified as 240 C (the lower bound for temperature). We want to be in the domain where increasing temperature increases strength, the same domain [previous studies](https://www.researchgate.net/figure/Dependence-of-the-adhesion-force-on-the-nozzle-temperature_fig2_321228371) have operated in. Thus, we select 240 C as our temperature upper bound.
+
+Looking to our [factor level characterization](#experimental-notes-1), we see than prints were still able to adhere at 200 C, but failed at 190 C, so we select 200 C as our temperature lower bound. This lower temperature is in line with [previous studies](https://www.researchgate.net/figure/Dependence-of-the-adhesion-force-on-the-nozzle-temperature_fig2_321228371) using the same PLA on polyester as us.
+
+**Flow: 150% - 250%**
+Our previous testing showed that increased flow was beneficial to adhesion strength, with increasing linear effect strength at lower temperatures. Given we are operating at lower temperatures in this study, we expect this effect to strengthen and therefore take longer to saturate. This informs an increase of the upper bound from 200% to 250%.
+
+**Z offset 0.2 mm - 0.3 mm**
+Lower temperatures seem to make this effect more significant. We can't go below 0.2 mm though, as at that point the nozzle starts to deflect the mandrels during printing, which introduces mandrel flexibility as a process factor that could play a role in where the optimal set point lies. We want to avoid this complication, so we keep the lower bound at 0.2 mm.
+
+**Speed 0.3 - 0.6**
+Our prior study demonstrated speed curvature is not particularly sensitive to temperature, and the optimal speed multiplier we identified was very near the midpoint of the range of values tested. To get better resolution of this curvature, we shrink the range from 0.2 - 0.7 to 0.3 - 0.6.
+
+**Ironing**
+We aren't including ironing as a parameter, so it will be set to 0 for all runs.
+
+### Study Sizing
+**Finding Anticipated RMSE**
+As discussed [previously](#statistical-analysis), residual variance in our previous model is not constant. There is a large jump in variance likely around the region where failure mode changes from plastic breaking to mesh breaking. We want to estimate the residual RMSE at low temperature - where we'll actually be testing in this study. Thus, we exclude all samples with temperature above 240 C from the previous data set and re-fit a second order RSM with speed, z offset, flow, and ironing with mandrel as a blocking term. This gave a model RMSE of **14.66014 lbs** (from summary of fit report); this isn't too far off of the center-point-estimated RMSE of [13.71069 lbs](#results) or the full-model RMSE of 12.73922 lbs.
+
+**Building Model**
+Sizing was similar as that for the [previous study](#methods-1), except we don't have to worry about factoring into account previously-collected center points.
+
+In JMP's Custom Design tool,
+1) Set optimality criterion to I-optimal.
+2) Add response (adhesion strength) and factors.
+3) Decide on the number of samples to try (should be divisible by 6 and 18 minimum for our set of parameters).
+4) Add mandrel as a blocking factor with runs per block equal to the number of samples / 6.
+5) Add all [selected model terms](#selecting-design-terms)
+6) Set center points to 6 to give a good lack of fit estimate on curvature. Leave replicates as 0, JMP will add them optimally.
+7) Make design, and under power analysis fill in the anticipated RSME (14.66014 lbs). We assume a minimum effect size of 10 lbs, as this is on the same order as the average mandrel effect from the mean and is roughly 10% of the average measured adhesion strength, which aligns with [NIST guidelines](https://www.itl.nist.gov/div898/handbook/pri/section5/pri5972.htm).
+8) We want to achieve at least 0.8 statistical power - the interdisciplinary standard minimum according to the [literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC7425741/). Repeat steps 3-7 until sufficient power has been achieved.
+
+I chose to do 90 samples total, slightly above necessary accounting for the possibility of excluded samples (either from print failure or from mesh breaking modality). JMP populated this experiment with 8 replicates, with 6 center points this leaves 76 samples for estimation.
+
+### Testing Methods
+Same run construction and ADMET process as in [prior adhesion testing](#methods-1). All samples were imaged post-break and were categorized as either "plastic failure" or "mesh failure". Samples for which the mesh broke before the plastic interface will be discarded from analysis.
+
+### Print Settings
+Same as [factor level characterization](#print-settings)
+
+### Printed Geometry
+Same as [variance testing](#printed-geometry-1)
+
+### Experimental Notes
+See this [file](/Optimization%20Testing/Optimal%20Design%20Runs.xlsx).
+
+### Results
